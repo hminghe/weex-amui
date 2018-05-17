@@ -42,7 +42,7 @@
 </style>
 
 ```
-更详细代码可以参考 [这里](TODO)
+更详细代码可以参考 [这里](https://github.com/HMingHe/weex-amui/blob/master/example/wing-blank/index.vue)
 
 ### 可配置参数
 | Prop	 | Type | Required | Default | Description |

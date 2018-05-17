@@ -32,7 +32,7 @@ npm i weex-amui -S
 ```
 
 ## 使用前
-1. 因为官方版本的 `weex-vue-precompiler` 会把自定义组件的 `click`, `change` 等事件处理出错，需要安装一下另外一个修改的版本**(只影响web端)**。
+1. 因为官方版本的 `weex-vue-precompiler` 会把自定义组件的 `click`, `change` 等事件处理出错，需要安装一下另外一个修改的版本**(只影响web端)**。
 ```shell
 npm i https://github.com/HMingHe/weex-vue-precompiler.git -D
 ```
