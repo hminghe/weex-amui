@@ -1,0 +1,79 @@
+@import '../base/common.less';
+
+.am-button {
+  // width: @button-width;
+  height: @button-height;
+  line-height: @button-height;
+  text-align: center;
+  border-width: @border-width-sm;
+  border-style: solid;
+  border-radius: @radius-md;
+  font-size: @button-font-size;
+  lines: 1;
+  color: @color-text-base-inverse;
+  padding-left: @h-spacing-lg;
+  padding-right: @h-spacing-lg;
+
+  
+  &-default {
+    color: @color-text-base;
+    background-color: @fill-base;
+    border-color: @border-color-base;
+    &-active {
+      background-color: @fill-tap;
+    }
+    &-disabled {
+      opacity: .6;
+      color: fade(@color-text-base, 30%);
+    }
+  }
+
+  &-primary {
+    background-color: @primary-button-fill;
+    border-color: @primary-button-fill;
+    &-active {
+      background-color: @brand-primary-tap;
+      border-color: @brand-primary-tap;
+      color: fade(@color-text-base-inverse, 30%);
+    }
+    &-disabled {
+      opacity: .4;
+      color: fade(@color-text-base-inverse, 60%);
+    }
+  }
+  &-warning {
+    background-color: @warning-button-fill;
+    border-color: @warning-button-fill;
+    &-active {
+      background-color: @warning-button-fill-tap;
+      border-color: @warning-button-fill-tap;
+      color: fade(@color-text-base-inverse, 30%);
+    }
+    &-disabled {
+      opacity: .6;
+      color: fade(@color-text-base-inverse, 60%);
+    }
+  }
+
+  &-ghost {
+    background-color: transparent;
+    border-color: @ghost-button-color;
+    color: @ghost-button-color;
+    &-active {
+      color: @ghost-button-fill-tap;
+      border-color: @ghost-button-fill-tap;
+    }
+    &-disabled {
+      color: fade(@color-text-base, 10%);
+      border-color: fade(@color-text-base, 10%);
+    }
+  }
+
+  &-small {
+    font-size: @button-font-size-sm;
+    height: @button-height-sm;
+    line-height: @button-height-sm;
+  }
+
+  .buttonTheme()
+}

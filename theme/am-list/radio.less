@@ -1,0 +1,20 @@
+@import "../base/common.less";
+
+.am-radio {
+  margin-right: 8 * @hd;
+  transform: rotate(45deg);
+  &-inner {
+    // width: 7 * @hd;
+    // height: 14 * @hd;
+    width: 8 * @hd;
+    height: 16 * @hd;
+    border-style: solid;
+    border-right-width: 1.5 * @hd;
+    border-bottom-width: 1.5 * @hd;
+    border-color: @brand-primary;
+    box-sizing: content-box;
+    &-disabled {
+      border-color: @color-text-disabled;
+    }
+  }
+}

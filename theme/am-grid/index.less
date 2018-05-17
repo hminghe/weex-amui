@@ -1,0 +1,36 @@
+@import "../base/common.less";
+
+.am-grid {
+  &-line {
+    border-color: @border-color-base;
+    border-bottom-width: @border-width-sm;
+    border-left-width: @border-width-sm;
+  }
+  // &-row {
+    // border-left-width: @border-width-sm;
+    // border-right-width: @border-width-sm;
+    // border-top-width: @border-width-sm;
+    // border-color: @border-color-base;
+  // }
+  &-item {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    &-line {
+      border-right-width: @border-width-sm;
+      border-top-width: @border-width-sm;
+      border-color: @border-color-base;
+    }
+    &-tap:active {
+      background-color: @fill-tap;
+    }
+  }
+  &-icon {
+    margin-top: @v-spacing-md;
+  }
+  &-text {
+    margin-top: @v-spacing-md;
+    font-size: @font-size-caption-sm;
+    color: @color-text-base;
+  }
+}

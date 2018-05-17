@@ -1,0 +1,26 @@
+@import "../base/common.less";
+@import "./extra.less";
+
+.am-list-input {
+  color: @color-text-base;
+  font-size: @font-size-heading;
+  appearance: none;
+  // padding: 2 * @hd 0;
+  padding-top: 2 * @hd;
+  padding-bottom: 2 * @hd;
+  border-width: 0;
+  background-color: transparent;
+  // line-height: @line-height-paragraph * @font-size-heading;
+  box-sizing: border-box;
+  flex: 1;
+
+  // &::placeholder {
+  //   color: @color-text-placeholder;
+  //   line-height: 1.2;
+  // }
+
+  &-disabled {
+    color: @color-text-disabled;
+    background-color: #fff;
+  }
+}

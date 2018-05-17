@@ -1,0 +1,115 @@
+@import "../base/common.less";
+@import "./extra.less";
+
+.am-list {
+  &-item {
+    position: relative;
+    padding-left: @h-spacing-lg;
+    // height: @list-item-height;
+    // min-height: @list-item-height;
+    background-color: @fill-base;
+    flex-direction: row;
+    align-items: center;
+    &-tap:active {
+      background-color: @fill-tap;
+    }
+    &-first {
+      border-color: @border-color-base;
+      border-top-width: @border-width-sm;
+    }
+    &-last {
+      border-color: @border-color-base;
+      border-bottom-width: @border-width-sm;
+    }
+  }
+  &-line {
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    padding-right: @h-spacing-lg;
+    padding-top: 10 * @hd;
+    padding-bottom: 9 * @hd;
+    border-bottom-color: @border-color-base;
+    border-bottom-width: @border-width-sm;
+    min-height: @list-item-height;
+    // &-multiple{
+    //   padding-top: 10 * @hd;
+    //   padding-bottom: 9 * @hd;
+    // }
+    &-last {
+      border-bottom-width: 0;
+    }
+    &-align {
+      &-top {
+        align-items: flex-start;
+      }
+      &-middle {
+        align-items: center;
+      }
+      &-bottom {
+        align-items: flex-end;
+      }
+    }
+    // align-self: stretch;
+  }
+  &-thumb {
+    margin-right: @h-spacing-lg;
+    width: @icon-size-md;
+    height: @icon-size-md;
+  }
+  &-content {
+    flex: 1;
+    margin-right: @h-spacing-sm;
+    &-text {
+      color: @color-text-base;
+      font-size: @font-size-heading;
+      line-height: @line-height-paragraph * @font-size-heading;
+      &-disabled {
+        color: @color-text-disabled;
+      }
+      &-2 {
+        max-width: 2 * @font-size-heading;
+      }
+  
+      &-3 {
+        max-width: 3 * @font-size-heading;
+      }
+  
+      &-4 {
+        max-width: 4 * @font-size-heading;
+      }
+  
+      &-5 {
+        max-width: 5 * @font-size-heading;
+      }
+  
+      &-6 {
+        max-width: 6 * @font-size-heading;
+      }
+  
+      &-7 {
+        max-width: 7 * @font-size-heading;
+      }
+    }
+    &-brief {
+      color: @color-text-caption;
+      font-size: @font-size-subhead;
+      line-height: @line-height-paragraph * @font-size-heading;
+      // margin-top: @v-spacing-sm;
+    }
+  }
+
+  &-arrow {
+    width: @icon-size-xxs;
+    height: @icon-size-xxs;
+    margin-left: @h-spacing-md;
+
+    &-vertical {
+      transform: rotate(90deg);
+    }
+
+    &-vertical-up {
+      transform: rotate(270deg);
+    }
+  }
+}
