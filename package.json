@@ -1,9 +1,14 @@
 {
   "name": "weex-amui",
   "version": "0.0.1",
-  "main": "lib/index.js",
+  "main": "index.js",
   "description": "Ant Design Mobile of Weex",
   "author": "minghe",
+  "files": [
+    "packages",
+    "theme",
+    "index.js"
+  ],
   "scripts": {
     "start": "npm run serve",
     "build": "webpack --env.NODE_ENV=common",

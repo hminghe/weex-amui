@@ -18,7 +18,7 @@ npm i weex-amui -S
 </template>
 
 <script>
-  import { AmButton } from 'weex-flymeui';
+  import { AmButton } from 'weex-amui';
 
   export default {
     components: { AmButton },
@@ -64,3 +64,9 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 npm i
 npm run start
 ```
+
+## 参考或者直接使用了他们的代码，感谢
+
+[Ant Design Mobile](https://mobile.ant.design/)
+[weex-ui](https://github.com/alibaba/weex-ui)
+[weex-flymeui](https://github.com/FlymeApps/weex-flymeui)
