@@ -32,12 +32,12 @@ npm i weex-amui -S
 ```
 
 ## 使用前
-1. 因为官方版本的 `weex-vue-precompiler` 会把自定义组件的 `click`, `change` 等事件处理出错，需要安装一下另外一个修改的版本**(只影响web端)**。
+- 安装 `less-loader` 以正确编译less源码
 ```shell
-npm i https://github.com/HMingHe/weex-vue-precompiler.git -D
+npm i less less-loader -D
 ```
 
-2. 需要使用 [babel-plugin-component](https://www.npmjs.com/package/babel-plugin-component) 来只引入需要的组件打包，同时如果没有安装 `babel-preset-stage-0`，也需要一并安装。
+- 安装 [babel-plugin-component](https://www.npmjs.com/package/babel-plugin-component) 来只引入需要的组件打包，同时如果没有安装 `babel-preset-stage-0`，也需要一并安装。
 ```shell
 npm i babel-preset-stage-0 babel-plugin-component  -D
 ```
@@ -57,6 +57,12 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
   ]
 }
 ```
+
+- 如果你使用了 `weex-vue-render@1.x` 版本（现在使用 `weex-toolkit` 创建的项目可选`0.x`和`1.x`），1.x版本依赖的 `weex-vue-precompiler` 当前版本会把自定义组件的 `click`, `change` 等事件处理出错，需要安装一下另外一个修改的版本。
+```shell
+npm i https://github.com/HMingHe/weex-vue-precompiler.git -D
+```
+
 
 ## 运行 Demo
 
