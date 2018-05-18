@@ -82,5 +82,6 @@ export default {
 }
 </script>
 
-<style scoped lang="less" src="../../theme/am-button/index.less">
+<style scoped lang="less">
+@import "../../theme/am-button/index.less";
 </style>

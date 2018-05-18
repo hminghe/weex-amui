@@ -204,13 +204,7 @@ const weexConfig = {
         test: /\.vue(\?[^?]+)?$/,
         use: [{
           loader: 'weex-loader',
-          options: Object.assign(vueLoaderConfig({useVue: false}), {
-            postcss: {
-              options: {
-                syntax: require('postcss-less')
-              }
-            }
-          })
+          options: vueLoaderConfig({useVue: false})
         }]
       }
     ]

@@ -102,6 +102,6 @@ export default {
 }
 </script>
 
-<style scoped lang="less" src="../../theme/am-list/checkbox.less">
-
+<style scoped lang="less">
+@import "../../theme/am-list/checkbox.less";
 </style>

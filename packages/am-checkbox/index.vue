@@ -67,4 +67,6 @@ export default {
 }
 </script>
 
-<style  scoped lang="less" src="../../theme/am-checkbox/index.less"></style>
+<style  scoped lang="less">
+@import "../../theme/am-checkbox/index.less";
+</style>

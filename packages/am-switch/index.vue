@@ -111,4 +111,6 @@ export default {
 }
 </script>
 
-<style  scoped lang="less" src="../../theme/am-switch/index.less"></style>
+<style  scoped lang="less">
+@import "../../theme/am-switch/index.less";
+</style>

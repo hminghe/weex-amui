@@ -129,5 +129,6 @@ export default {
 }
 </script>
 
-<style scoped lang="less" src="../../theme/am-grid/index.less">
+<style scoped lang="less">
+@import "../../theme/am-grid/index.less";
 </style>

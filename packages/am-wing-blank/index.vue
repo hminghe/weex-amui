@@ -16,5 +16,6 @@ export default {
 }
 </script>
 
-<style scoped lang="less" src="../../theme/am-wing-blank/index.less">
+<style scoped lang="less">
+@import "../../theme/am-wing-blank/index.less";
 </style>

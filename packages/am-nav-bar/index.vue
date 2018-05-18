@@ -123,5 +123,6 @@ export default {
 }
 </script>
 
-<style scoped lang="less" src="../../theme/am-nav-bar/index.less">
+<style scoped lang="less">
+@import "../../theme/am-nav-bar/index.less";
 </style>
