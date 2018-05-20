@@ -24,6 +24,14 @@
           title="am-nav-bar 导航栏"
           @click="handleClick('am-nav-bar')"
         />
+        <am-list-item
+          title="am-tab-bar 标签栏"
+          @click="handleClick('am-tab-bar')"
+        />
+        <am-list-item
+          title="am-segmented-control 分段器"
+          @click="handleClick('am-segmented-control')"
+        />
       </am-list>
       <am-list header="数据输入">
         <am-list-item

@@ -17,6 +17,7 @@ import AmIcon from './packages/am-icon'
 import AmNavBar from './packages/am-nav-bar'
 import AmTabBar from './packages/am-tab-bar'
 import AmTabBarItem from './packages/am-tab-bar-item'
+import AmSegmentedControl from './packages/am-segmented-control'
 
 export {
   Utils,
@@ -37,5 +38,6 @@ export {
   AmIcon,
   AmNavBar,
   AmTabBar,
-  AmTabBarItem
+  AmTabBarItem,
+  AmSegmentedControl
 }

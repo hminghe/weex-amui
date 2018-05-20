@@ -1,0 +1,41 @@
+@import "../base/common.less";
+
+.am-segment {
+  flex-direction: row;
+  height: @segmented-control-height;
+  opacity: 1;
+  // border-color: @segmented-control-color;
+  // border-width: @border-width-md;
+  // border-radius: @radius-md;
+
+  &-disabled {
+    opacity: 0.5;
+  }
+
+  &-item {
+    flex: 1;
+    // justify-content: center;
+    // align-items: center;
+    text-align: center;
+    color: @segmented-control-color;
+    font-size: @font-size-base;
+    line-height: @segmented-control-height;
+    border-color: @segmented-control-color;
+    border-right-width: @border-width-md;
+    border-bottom-width: @border-width-md;
+    border-top-width: @border-width-md;
+    &-first {
+      border-left-width: @border-width-md;
+      border-top-left-radius: @radius-md;
+      border-bottom-left-radius: @radius-md;
+    }
+    &-last {
+      border-top-right-radius: @radius-md;
+      border-bottom-right-radius: @radius-md;
+    }
+    &-selected {
+      background-color: @segmented-control-color;
+      color: @color-text-base-inverse;
+    }
+  }
+}
