@@ -4,7 +4,8 @@
     - [am-white-space 上下留白](packages/am-white-space/)
 
 - 导航
-    - [wxc-nav-bar 导航栏](packages/am-nav-bar/)
+    - [am-nav-bar 导航栏](packages/am-nav-bar/)
+    - [am-tab-bar 标签栏](packages/am-tab-bar/)
  
 - 数据输入
     - [am-button 按钮](packages/am-button/)
