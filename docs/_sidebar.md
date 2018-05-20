@@ -6,6 +6,7 @@
 - 导航
     - [am-nav-bar 导航栏](packages/am-nav-bar/)
     - [am-tab-bar 标签栏](packages/am-tab-bar/)
+    - [am-segmented-control 分段器](packages/am-segmented-control/)
  
 - 数据输入
     - [am-button 按钮](packages/am-button/)
