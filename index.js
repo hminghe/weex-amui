@@ -15,6 +15,8 @@ import AmSwitch from './packages/am-switch'
 import AmGrid from './packages/am-grid'
 import AmIcon from './packages/am-icon'
 import AmNavBar from './packages/am-nav-bar'
+import AmTabBar from './packages/am-tab-bar'
+import AmTabBarItem from './packages/am-tab-bar-item'
 
 export {
   Utils,
@@ -33,5 +35,7 @@ export {
   AmSwitch,
   AmGrid,
   AmIcon,
-  AmNavBar
+  AmNavBar,
+  AmTabBar,
+  AmTabBarItem
 }

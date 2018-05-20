@@ -1,0 +1,40 @@
+@import '../base/common.less';
+
+.am-tab-bar {
+  &-item {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    // padding-top: @v-spacing-sm;
+    // padding-bottom: @v-spacing-sm;
+    // background-color: @fill-base;
+    // &-icon {
+      
+    // }
+    &-wrap {
+      align-items: center;
+      padding-left: 4 * @hd;
+      padding-right: 4 * @hd;
+    }
+    &-image {
+      height: @icon-size-md;
+      width: @icon-size-md;
+    }
+    &-title {
+      font-size: @font-size-caption-sm;
+      margin-top: @v-spacing-xs;
+      line-height: @line-height-base * @font-size-caption-sm;
+    }
+    &-dot {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: #ff5b05;
+      width: 8 * @hd;
+      height: 8 * @hd;
+      border-radius: 8 * @hd;
+    }
+  }
+}
+
+
