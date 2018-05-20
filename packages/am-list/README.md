@@ -39,10 +39,10 @@
 ```
 更详细代码可以参考 [这里](https://github.com/HMingHe/weex-amui/blob/master/example/list/index.vue)
 
-### 可配置参数
+### 可配置参数
 | Prop	 | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:|:----------:|
-| **`header`** | `String` | `N` | `null` | 头部文字 |
+| **`header`** | `String` | `N` | `null` | 头部文字 |
 | **`footer`** | `String` | `N` | `null`  | 底部文字 |
 | **`headerStyle`** | `Object` | `N` | `{}` | 头部样式 |
 | **`footerStyle`** | `Object` | `N` | `{}` | 底部样式 |
@@ -50,8 +50,8 @@
 ### Slots
 | Name | Required | Description |
 | ---- |:---:|:----------:|
-| **`header`** | `N` | 会覆盖 `prop.header` |
-| **`footer`** | `N` | 会覆盖 `prop.footer` |
+| **`header`** | `N` | 会覆盖 `prop.header` |
+| **`footer`** | `N` | 会覆盖 `prop.footer` |
 
 ### Events
 ```
@@ -61,23 +61,23 @@
 # am-list-item
 | Prop	 | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:|:----------:|
-| **`thumb`** | `String` | `N` | `null` | 缩略图链接 |
+| **`thumb`** | `String` | `N` | `null` | 缩略图链接 |
 | **`thumbStyle`** | `Object` | `N` | `{}` | 缩略图样式 |
-| **`title`** | `String` | `N` | `null` | 标题 |
+| **`title`** | `String` | `N` | `null` | 标题 |
 | **`titleNumber`** | `number` | `N` | `0`  | 标题的文字个数，`0` 不限制，可用 `2-7` 之间的数字	 |
-| **`titleDisabled`** | `Boolean` | `N` | `false` | 标题禁用(字体颜色设置为`#bbb`) |
+| **`titleDisabled`** | `Boolean` | `N` | `false` | 标题禁用(字体颜色设置为`#bbb`) |
 | **`extra`** | `String` | `N` | `null` | 右边内容 |
 | **`arrow`** | `String` | `N` | `horizontal` | 箭头方向(右,上,下), 可选`horizontal`,`up`,`down`,`empty`，如果是`empty`不显示 |
 | **`brief`** | `String` | `N` | `null` | 辅助说明，在标题下方 |
 | **`align`** | `String` | `N` | `null` | 子元素垂直对齐，可选`top`,`middle`,`bottom`	 |
-| **`tapActive`** | `Boolean` | `N` | `true` | 按下效果 |
+| **`tapActive`** | `Boolean` | `N` | `true` | 按下效果 |
 
 ### Slots
 | Name | Required | Description |
 | ---- |:---:|:----------:|
-| **`thumb`** | `N` | 会覆盖 `prop.thumb`，`prop.thumbStyle` 对他也无效 |
-| **`extra`** | `N` | 会覆盖 `prop.extra` |
-| **`brief`** | `N` | 会覆盖 `prop.brief` |
+| **`thumb`** | `N` | 会覆盖 `prop.thumb`，`prop.thumbStyle` 对他也无效 |
+| **`extra`** | `N` | 会覆盖 `prop.extra` |
+| **`brief`** | `N` | 会覆盖 `prop.brief` |
 
 ### Events
 | Event	 | Description | Parameters |

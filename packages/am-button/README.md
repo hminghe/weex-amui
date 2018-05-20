@@ -27,7 +27,7 @@
 ```
 更详细代码可以参考 [这里](https://github.com/HMingHe/weex-amui/blob/master/example/button/index.vue)
 
-### 可配置参数
+### 可配置参数
 | Prop	 | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:|:----------:|
 | **`text`** | `String` | `Y` | `确认` | 展现的文字 |

@@ -36,15 +36,15 @@
 ```
 更详细代码可以参考 [这里](https://github.com/HMingHe/weex-amui/blob/master/example/switch/index.vue)
 
-### 可配置参数
+### 可配置参数
 | Prop	 | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:|:----------:|
 | **`value`** | `Boolean` | `N` | `false` | 是否选中，可以用 `v-model` 双向绑定 |
 | **`disabled`** | `Boolean` | `N` | `false` | 禁用 |
-| **`color`** | `String` | `N` | `null` | 选中的颜色 |
+| **`color`** | `String` | `N` | `null` | 选中的颜色 |
 | **`native`** | `Boolean` | `N` | `false` | 是否使用 `weex` 的 `<switch/>` 组件 |
 
-- 注：ios 如果不设置 `color` 默认使用 `weex` 的 `<switch/>` 组件
+- 注：ios 如果不设置 `color` 默认使用 `weex` 的 `<switch/>` 组件
 
 ### Events
 | Event	 | Description | Parameters |

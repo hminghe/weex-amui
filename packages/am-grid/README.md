@@ -40,7 +40,7 @@
 ```
 更详细代码可以参考 [这里](https://github.com/HMingHe/weex-amui/blob/master/example/grid/index.vue)
 
-### 可配置参数
+### 可配置参数
 | Prop	 | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:|:----------:|
 | **`data`** | `Array<{icon, text}>	` | `Y` | `[]` | 传入的菜单数据 |

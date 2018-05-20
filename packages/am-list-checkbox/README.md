@@ -41,20 +41,20 @@
 ```
 更详细代码可以参考 [这里](https://github.com/HMingHe/weex-amui/blob/master/example/list-checkbox/index.vue)
 
-### 可配置参数
+### 可配置参数
 | Prop	 | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:|:----------:|
-| **`value`** | `Any` | `Y` |  | 选中之后的值 |
+| **`value`** | `Any` | `Y` |  | 选中之后的值 |
 | **`checkedValues`** | `Array` | `Y` | `[]`  | 所有选中值的数组，请使用 `.sync` 同步 |
 | **`disabled`** | `Boolean` | `N` | `false` | 禁用 |
 | **`color`** | `String` | `N` | `null` | checkbox的颜色 |
 | **`left`** | `Boolean` | `N` | `false` | checkbox在左边 |
 
 
-- 注：checkbox 默认在 `am-list-item` 的 `slots.extra` 位置，当 `left=true` 时， `checkbox` 在 `slots.thumb` 位置。
-- 除了`tapActive` 和 `arrow`，其他参数与 `am-list-item` 一致。
+- 注：checkbox 默认在 `am-list-item` 的 `slots.extra` 位置，当 `left=true` 时， `checkbox` 在 `slots.thumb` 位置。
+- 除了`tapActive` 和 `arrow`，其他参数与 `am-list-item` 一致。
 - `tapActive` 不能设置。
-- `arrow` 默认是 `empty`
+- `arrow` 默认是 `empty`
 
 
 

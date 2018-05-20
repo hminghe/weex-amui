@@ -27,7 +27,7 @@
 ```
 更详细代码可以参考 [这里](https://github.com/HMingHe/weex-amui/blob/master/example/flex/index.vue)
 
-### 可配置参数
+### 可配置参数
 | Prop	 | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:|:----------:|
 | **`direction`** | `String` | `N` | `row` | 可选：`['column', 'row']` |
@@ -41,7 +41,7 @@
 | **`default`** | `Y` | 一般放 `am-flex-item` |
 
 
-### am-flex-item 可配置参数
+### am-flex-item 可配置参数
 | Prop	 | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:|:----------:|
 | **`flex`** | `Number` | `N` | `1` |  |

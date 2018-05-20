@@ -36,13 +36,13 @@
 ```
 更详细代码可以参考 [这里](https://github.com/HMingHe/weex-amui/blob/master/example/list-radio/index.vue)
 
-### 可配置参数
+### 可配置参数
 | Prop	 | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:|:----------:|
 | **`checked`** | `Boolean` | `N` | `false` | 是否选中 |
-| **`thumb`** | `String` | `N` | `null` | 缩略图链接 |
+| **`thumb`** | `String` | `N` | `null` | 缩略图链接 |
 | **`thumbStyle`** | `Object` | `N` | `{}` | 缩略图样式 |
-| **`title`** | `String` | `N` | `null` | 标题 |
+| **`title`** | `String` | `N` | `null` | 标题 |
 | **`brief`** | `String` | `N` | `null` | 辅助说明，在标题下方 |
 | **`align`** | `String` | `N` | `null` | 子元素垂直对齐，可选`top`,`middle`,`bottom`	 |
 | **`disabled`** | `Boolean` | `N` | `false` | 禁用 |
@@ -53,8 +53,8 @@
 ### Slots
 | Name | Required | Description |
 | ---- |:---:|:----------:|
-| **`thumb`** | `N` | 会覆盖 `prop.thumb` |
-| **`brief`** | `N` | 会覆盖 `prop.brief` |
+| **`thumb`** | `N` | 会覆盖 `prop.thumb` |
+| **`brief`** | `N` | 会覆盖 `prop.brief` |
 
 ### 事件回调
 | Event	 | Description | Parameters |

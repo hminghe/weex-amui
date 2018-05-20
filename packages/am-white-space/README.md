@@ -35,7 +35,7 @@
 ```
 更详细代码可以参考 [这里](https://github.com/HMingHe/weex-amui/blob/master/example/white-space/index.vue)
 
-### 可配置参数
+### 可配置参数
 | Prop	 | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:|:----------:|
 | **`size`** | `String` | `N` | `md` | size，可选：`xs`,`sm`,`md`,`lg`,`xl` |
