@@ -42,6 +42,6 @@
 | Prop	 | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:|:----------:|
 | **`type`** | `String` | `N` | `null` | 内置图标名或者对应图标的 `unicode` 字符 |
-| **`size`** | `String` | `N` | `md` | size，可选：`xxs`,`xs`,`sm`,`md`,`lg` |
+| **`size`** | `String`/`Number` | `N` | `md` | 固定值可选：`xxs`,`xs`,`sm`,`md`,`lg` 或者 自定义大小number |
 | **`color`** | `String` | `N` | `null` | 颜色 |
 | **`fontFamily`** | `String` | `N` | `AMUIIconFont` | 字体名称，自定义图标要设置 |

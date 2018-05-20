@@ -50,8 +50,8 @@ export default {
         fontFamily: this.fontFamily
       }
       if (!isNaN(this.size)) {
-        style.fontSize = this.size
-        style.lineHeight = this.size
+        style.fontSize = this.size + 'px'
+        style.lineHeight = this.size + 'px'
       }
       return style
     }
@@ -59,7 +59,7 @@ export default {
   beforeCreate () {
     dom.addRule('fontFace', {
       'fontFamily': 'AMUIIconFont',
-      'src': "url('https://at.alicdn.com/t/font_666184_8900hd2vp3krzfr.ttf')"
+      'src': "url('https://at.alicdn.com/t/font_666184_6i47o5l7pbiysyvi.ttf')"
     })
   }
 }
