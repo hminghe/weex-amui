@@ -5,6 +5,7 @@
 
 - 导航
     - [am-nav-bar 导航栏](packages/am-nav-bar/)
+    - [am-tabs 标签页](packages/am-tabs/)
     - [am-tab-bar 标签栏](packages/am-tab-bar/)
     - [am-segmented-control 分段器](packages/am-segmented-control/)
  

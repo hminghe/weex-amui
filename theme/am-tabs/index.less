@@ -1,0 +1,65 @@
+@import "../base/common.less";
+
+.am-tabs {
+  background-color: @fill-base;
+  border-color: @border-color-base;
+  display: flex;
+  // overflow: hidden;
+  &-wrap {
+    &-horizontal {
+      height: @tabs-height + 1;
+      overflow-y: hidden;
+      overflow-x: scroll;
+    }
+    &-vertical {
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+  }
+  &-top {
+    border-bottom-width: @border-width-sm;
+  }
+  &-bottom {
+    border-top-width: @border-width-sm;
+  }
+  &-left {
+    border-right-width: @border-width-sm;
+  }
+  &-right {
+    border-left-width: @border-width-sm;
+  }
+  &-horizontal {
+    flex-direction: row;
+  }
+  &-item {
+    justify-content: center;
+    align-items: center;
+    height: @tabs-height;
+    &-text  {
+      font-size: @tabs-font-size-heading;
+      &-selected {
+        color: @tabs-color;
+      }
+    }
+    &-underline {
+      position: absolute;
+      border-color: @tabs-color;
+      border-width: 1px;
+      &-top, &-bottom {
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      &-left {
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+      &-right {
+        top: 0;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+}

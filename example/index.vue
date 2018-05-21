@@ -25,6 +25,10 @@
           @click="handleClick('am-nav-bar')"
         />
         <am-list-item
+          title="am-tabs 标签页"
+          @click="handleClick('am-tabs')"
+        />
+        <am-list-item
           title="am-tab-bar 标签栏"
           @click="handleClick('am-tab-bar')"
         />
