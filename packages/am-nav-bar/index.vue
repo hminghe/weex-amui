@@ -16,7 +16,6 @@
           <text
             v-else-if="item.is === 'text'"
             :class="['am-nav-bar-btn-text', `am-nav-bar-${mode}-btn-text`]"
-            @click="handleClick"
           >{{item.text}}</text>
           <!-- <image v-else-if="item.is === 'image'" :src="item.src"/> -->
         </div>
@@ -30,7 +29,7 @@
         <div
           v-for="(item, index) in right"
           :key="index"
-          @click="handleClick({key: 'title'})"
+          @click="handleClick(item)"
           :class="['am-nav-bar-btn', `am-nav-bar-${mode}-btn`]"
         >
           <am-icon
