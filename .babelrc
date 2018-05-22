@@ -2,5 +2,15 @@
   "presets": [
     "es2015",
     "stage-0"
+  ],
+  "plugins": [
+    [
+      "component",
+      {
+        "libraryName": "../../index",
+        "libDir": "../packages",
+        "style": false
+      }
+    ]
   ]
 }

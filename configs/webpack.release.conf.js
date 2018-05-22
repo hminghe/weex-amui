@@ -25,6 +25,8 @@ const generateMultipleEntrys = (entry) => {
   let entrys = Object.keys(entry);
   // exclude vendor entry.
   entrys = entrys.filter(entry => entry !== 'vendor' );
+  // console.log(entrys)
+  // process.exit();
   const htmlPlugin = entrys.map(name => {
     return new HtmlWebpackPlugin({
       filename: name + '.html',
@@ -118,11 +120,11 @@ const productionConfig = webpackMerge(commonConfig[0], {
      *
      * See: https://github.com/ampedandwired/html-webpack-plugin
      */
-    new HtmlWebpackPlugin({
-      template: 'web/index.html',
-      chunksSortMode: 'dependency',
-      inject: 'head'
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: 'web/index.html',
+    //   chunksSortMode: 'dependency',
+    //   inject: 'head'
+    // }),
     /*
      * Plugin: ScriptExtHtmlWebpackPlugin
      * Description: Enhances html-webpack-plugin functionality
@@ -167,7 +169,7 @@ const weexConfig = webpackMerge(commonConfig[1], {
      *
      * See: http://webpack.github.io/docs/configuration.html#output-path
      */
-    path: helper.rootNode('dist'),
+    path: helper.rootNode('release/native'),
     /**
      * Specifies the name of each output file on disk.
      * IMPORTANT: You must not specify an absolute path here!
@@ -197,8 +199,9 @@ const weexConfig = webpackMerge(commonConfig[1], {
         drop_console: true,
         drop_debugger: true
       }
-    })
+    }),
+    commonConfig[1].plugins[0]
   ]
 })
 
-module.exports = productionConfig
+module.exports = [productionConfig, weexConfig]

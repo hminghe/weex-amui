@@ -88,7 +88,11 @@
 </template>
 
 <script>
-import { AmNavBar, AmList, AmListItem, Utils } from '../index'
+// import { AmNavBar, AmList, AmListItem, Utils } from '../index'
+import AmNavBar from '../packages/am-nav-bar'
+import AmList from '../packages/am-list'
+import AmListItem from '../packages/am-list-item'
+import Utils from '../packages/utils'
 const navigator = weex.requireModule('navigator')
 
 export default {
@@ -102,8 +106,11 @@ export default {
       name = name.replace('am-', '')
       const suffix = Utils.isWeb() ? 'html' : 'js'
       let url = `${name}/index.${suffix}`
-      console.log(url)
-      url = weex.config.bundleUrl.replace(`index.${suffix}`, url)
+      if (/\/$/.test(weex.config.bundleUrl)) {
+        url = weex.config.bundleUrl = url
+      } else {
+        url = weex.config.bundleUrl.replace(`index.${suffix}`, url)
+      }
       console.log('url', url)
       navigator.push({
         url: url,

@@ -94,9 +94,14 @@ const plugins = [
 
 // Config for compile jsbundle for web.
 const webConfig = {
-  entry: Object.assign(webEntry, {
-    'vendor': [path.resolve('node_modules/phantom-limb/index.js')]
-  }),
+  // entry: Object.assign(webEntry, {
+  //   'vendor': [path.resolve('node_modules/phantom-limb/index.js')]
+  // }),
+  entry: webEntry,
+  externals: {
+    'vue': 'Vue',
+    'weex-vue-render': 'weex'
+  },
   output: {
     path: helper.rootNode('./dist'),
     filename: '[name].web.js'

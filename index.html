@@ -27,6 +27,13 @@
       alias: {
       },
       basePath: location.port === '3000' ? '/' : '/weex-amui/',
+      plugins: [
+        function (hook, vm) {
+          hook.beforeEach(function (html) {
+            console.log(vm.route.file)
+          })
+        }
+      ]
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
