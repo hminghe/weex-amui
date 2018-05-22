@@ -73,7 +73,8 @@
       //   $pages.innerHTML = contents;
       // }
       var host = window.location.host;
-      createQRCode(`http://${host}/release/native/${page || 'index.js'}`)
+      var url = document.URL.replace('/docs/preview.html', `/release/native/${page || 'index.js'}`)
+      createQRCode(url)
     })();
   </script>
 </body>
