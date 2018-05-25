@@ -103,7 +103,7 @@ export default {
   },
   data () {
     return {
-      textareaValue: ''
+      textareaValue: this.value || ''
     }
   },
   computed: {
