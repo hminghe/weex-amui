@@ -20,6 +20,7 @@ import AmTabBarItem from './packages/am-tab-bar-item'
 import AmSegmentedControl from './packages/am-segmented-control'
 import AmTabs from './packages/am-tabs'
 import AmHtml from './packages/am-html'
+import AmMask from './packages/am-mask'
 
 export {
   Utils,
@@ -43,5 +44,6 @@ export {
   AmTabBarItem,
   AmSegmentedControl,
   AmTabs,
-  AmHtml
+  AmHtml,
+  AmMask
 }

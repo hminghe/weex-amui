@@ -2,6 +2,7 @@
     - [am-flex Flex布局](packages/am-flex/)
     - [am-wing-blank 两翼留白](packages/am-wing-blank/)
     - [am-white-space 上下留白](packages/am-white-space/)
+    - [am-mask 遮罩层](packages/am-mask/)
 
 - 导航
     - [am-nav-bar 导航栏](packages/am-nav-bar/)
