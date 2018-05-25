@@ -82,6 +82,10 @@
           title="am-list 列表"
           @click="handleClick('am-list')"
         />
+        <am-list-item
+          title="am-html HTML"
+          @click="handleClick('am-html')"
+        />
       </am-list>
     </scroller>
   </div>
