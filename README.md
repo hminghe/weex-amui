@@ -10,7 +10,7 @@ npm i weex-amui -S
 ```vue
 <template>
   <div>
-    <am-button 
+    <am-button
       @click="handleClick"
       text="确定"
       type="primary"/>
@@ -58,7 +58,7 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 }
 ```
 
-- 如果你使用了 `weex-vue-render@1.x` 版本（现在使用 `weex-toolkit` 创建的项目可选`0.x`和`1.x`），1.x版本依赖的 `weex-vue-precompiler` 当前版本会把自定义组件的 `click`, `change` 等事件处理出错，需要安装一下另外一个修改的版本。
+- 如果你使用了 `weex-vue-render@1.x` 版本（现在使用 `weex-toolkit` 创建的项目可选`0.x`和`1.x`），1.x版本依赖的 `weex-vue-precompiler` 当前版本会把自定义组件的 `click`, `change` 等事件处理出错，需要安装一下另外一个修改的版本。
 ```shell
 npm i https://github.com/HMingHe/weex-vue-precompiler.git -D
 ```
