@@ -32,7 +32,7 @@
 | ---- |:----:|:---:|:-------:|:----------:|
 | **`text`** | `String` | `Y` | `确认` | 展现的文字 |
 | **`width`** | `String` | `Y` |  | 宽度，默认是自适应文字长度 |
-| **`type`** | `String` | `N` | `primary` | 可选：`['primary','defulat','primary', 'warning']` (注1) |
+| **`type`** | `String` | `N` | `primary` | 可选：`['primary','defulat','ghost', 'warning']` (注1) |
 | **`size`** | `String` | `N` | `large` | 可选：`['large','small']` |
 | **`disabled`** | `Boolean` | `N` | `false` | 设置禁用	 |
 | **`btnStyle`** | `Object` | `N` | `{}` | 覆盖按钮样式 |
