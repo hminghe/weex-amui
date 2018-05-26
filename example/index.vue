@@ -18,6 +18,10 @@
           title="white-space 上下留白"
           @click="handleClick('am-white-space')"
         />
+        <am-list-item
+          title="am-mask 遮罩层"
+          @click="handleClick('am-mask')"
+        />
       </am-list>
       <am-list header="导航">
         <am-list-item
