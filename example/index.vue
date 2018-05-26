@@ -82,6 +82,10 @@
           title="am-list 列表"
           @click="handleClick('am-list')"
         />
+        <am-list-item
+          title="am-picker-view 选择器"
+          @click="handleClick('am-picker-view')"
+        />
       </am-list>
     </scroller>
   </div>

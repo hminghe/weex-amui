@@ -1,3 +1,5 @@
+const _toString = Object.prototype.toString
+
 const Utils = {
   isWeb () {
     const { platform } = weex.config.env
@@ -21,6 +23,9 @@ const Utils = {
   isAndroid () {
     const { platform } = weex.config.env
     return platform.toLowerCase() === 'android'
+  },
+  isPlainObject (obj) {
+    return _toString.call(obj) === '[object Object]'
   },
   makeClassList (classList) {
     // web 支持

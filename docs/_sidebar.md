@@ -22,3 +22,4 @@
     - [am-grid 宫格](packages/am-grid/)
     - [am-icon 图标](packages/am-icon/)
     - [am-list 列表](packages/am-list/)
+    - [am-picker-view 选择器](packages/am-picker-view/)

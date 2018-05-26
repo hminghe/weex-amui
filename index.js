@@ -19,6 +19,7 @@ import AmTabBar from './packages/am-tab-bar'
 import AmTabBarItem from './packages/am-tab-bar-item'
 import AmSegmentedControl from './packages/am-segmented-control'
 import AmTabs from './packages/am-tabs'
+import AmPickerView from './packages/am-picker-view'
 
 export {
   Utils,
@@ -41,5 +42,6 @@ export {
   AmTabBar,
   AmTabBarItem,
   AmSegmentedControl,
-  AmTabs
+  AmTabs,
+  AmPickerView
 }
