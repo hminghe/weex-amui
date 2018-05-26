@@ -95,6 +95,14 @@
           @click="handleClick('am-html')"
         />
       </am-list>
+      <am-list
+        header="反馈"
+      >
+        <am-list-item
+          title="am-popup 弹窗"
+          @click="handleClick('am-popup')"
+        />
+      </am-list>
     </scroller>
   </div>
 </template>

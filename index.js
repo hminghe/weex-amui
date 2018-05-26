@@ -22,6 +22,7 @@ import AmTabs from './packages/am-tabs'
 import AmPickerView from './packages/am-picker-view'
 import AmHtml from './packages/am-html'
 import AmMask from './packages/am-mask'
+import AmPopup from './packages/am-popup'
 
 export {
   Utils,
@@ -47,5 +48,6 @@ export {
   AmTabs,
   AmPickerView,
   AmHtml,
-  AmMask
+  AmMask,
+  AmPopup
 }
