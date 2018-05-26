@@ -26,6 +26,10 @@ export default {
       type: [Number, String],
       default: 0.6
     },
+    offset: {
+      type: Object,
+      default: () => {}
+    },
     animation: {
       type: Boolean,
       default: false
@@ -47,7 +51,10 @@ export default {
   computed: {
     style () {
       const style = {}
-      style.backgroundColor = `rgba(0, 0, 0,${!this.animation ? this.opacity : 0.2})`
+      Object.keys(this.offset).forEach(key => {
+        style[key] = `${this.offset[key]}px`
+      })
+      style.backgroundColor = `rgba(0, 0, 0,${!this.animation ? this.opacity : 0.1})`
       return style
     }
   },
@@ -87,6 +94,11 @@ export default {
       if (val !== this.currentShow) {
         this.switch(val)
       }
+    }
+  },
+  created () {
+    if (this.show) {
+      this.switch(true)
     }
   }
 }
