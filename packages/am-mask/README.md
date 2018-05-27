@@ -71,3 +71,4 @@ export default {
 | **`animation`** | `Boolean` | `N` | `false` | 显示隐藏动画 |
 | **`animationTimingFunction`** | `Array` | `N` | `['ease-in', 'ease-out']` | 动画函数，0：显示，1：隐藏 |
 | **`animationDuration`** | `Number` | `N` | `300` | 动画时间 |
+| **`offset`** | `Object{top, left, right, bottom}` | `N` | `{}` | 遮罩层的偏移量[注1] |

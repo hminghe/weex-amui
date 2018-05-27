@@ -28,7 +28,7 @@ export default {
     },
     offset: {
       type: Object,
-      default: () => {}
+      default: () => ({})
     },
     animation: {
       type: Boolean,
@@ -71,8 +71,7 @@ export default {
         this.$emit('update:show', show)
       }
       if (this.animation) {
-        this.$nextTick(() => {
-        // setTimeout(() => {
+        setTimeout(() => {
           animation.transition(this.$refs.mask, {
             styles: {
               backgroundColor: `rgba(0, 0, 0, ${show ? this.opacity : 0})`
@@ -85,7 +84,7 @@ export default {
               this.$emit('update:show', false)
             }
           })
-        })
+        }, 50)
       }
     }
   },

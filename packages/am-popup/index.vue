@@ -53,7 +53,7 @@ export default {
     },
     offset: {
       type: Object,
-      default: () => {}
+      default: () => ({})
     }
   },
   data () {
