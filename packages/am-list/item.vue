@@ -47,7 +47,7 @@ export default {
   props: props(),
   data () {
     return {
-      arrowUrl: arrowUrl
+      // arrowUrl: arrowUrl
     }
   },
   computed: {
