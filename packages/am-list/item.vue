@@ -18,12 +18,18 @@
       <slot name="extra">
         <text class="am-list-extra" v-if="extra">{{extra}}</text>
       </slot>
-      <image
+      <!-- <image
         v-if="showArrow"
         class="am-list-arrow"
         :class="arrowClass"
         :src="arrowUrl"
-        />
+        /> -->
+      <am-icon
+        v-if="showArrow"
+        class="am-list-arrow"
+        :type="arrow"
+        site="xxs"
+      ></am-icon>
     </div>
   </div>
 </template>
@@ -32,9 +38,11 @@
 import Utils from '../utils'
 import props from './item-props'
 import itemMixin from './item-mixin'
-const arrowUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABnUlEQVRYR82XTW7CMBCFZzRehFW5SYlKkbwq3ABOULgBPQm9QekJ4AbQDUioKHCTsCKLRFMZRJVWceKfRG2WiZ332TOeN0YoeaIoaidJtiCil14vPJSNdf2GuolK/HxOV4jYYYYYkUdSPq5dhXTztADb7eccAJ5/TsSJlA/qfW1P6Q4kSboEwKcmIbQAN9Gmd6ISQIEUQ8Bcyu7ENxZGAE1CGAM0BWEFUAKxDgIahWEY24bEGkAJbDb7KSLP8mLMfGi1xMAWwgnguhP7MQC/+UI4A5RBCCEmpqXbC0APAbEQNDCB8AbwhagFIAfxCgB3t7wwMbHaAJTobhd1sixTjvkNcYXRm1jtAGmarRChbWpgtQGoY8nMs1/iJwAelvURtQAU1QQAOBFRv+okeAP4iF+yw7Z258drxI9ENK5a+e0/zgA68SCgvo0fOAEUmREAHG3FnUJQ3B3xRxCIoc3KnUKgac3epeyOXXPJOARNiBuHoClxI4A/a8vzVzPTuu6SB//9anax1ntV16tMxWX1lTlwvZ6nSyIxNS2ttiBf02PsISPWB9wAAAAASUVORK5CYII='
+import AmIcon from '../am-icon'
+// const arrowUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABnUlEQVRYR82XTW7CMBCFZzRehFW5SYlKkbwq3ABOULgBPQm9QekJ4AbQDUioKHCTsCKLRFMZRJVWceKfRG2WiZ332TOeN0YoeaIoaidJtiCil14vPJSNdf2GuolK/HxOV4jYYYYYkUdSPq5dhXTztADb7eccAJ5/TsSJlA/qfW1P6Q4kSboEwKcmIbQAN9Gmd6ISQIEUQ8Bcyu7ENxZGAE1CGAM0BWEFUAKxDgIahWEY24bEGkAJbDb7KSLP8mLMfGi1xMAWwgnguhP7MQC/+UI4A5RBCCEmpqXbC0APAbEQNDCB8AbwhagFIAfxCgB3t7wwMbHaAJTobhd1sixTjvkNcYXRm1jtAGmarRChbWpgtQGoY8nMs1/iJwAelvURtQAU1QQAOBFRv+okeAP4iF+yw7Z258drxI9ENK5a+e0/zgA68SCgvo0fOAEUmREAHG3FnUJQ3B3xRxCIoc3KnUKgac3epeyOXXPJOARNiBuHoClxI4A/a8vzVzPTuu6SB//9anax1ntV16tMxWX1lTlwvZ6nSyIxNS2ttiBf02PsISPWB9wAAAAASUVORK5CYII='
 export default {
   name: 'am-list-item',
+  components: {AmIcon},
   mixins: [itemMixin],
   props: props(),
   data () {
@@ -62,12 +70,12 @@ export default {
         'am-list-line-last': this._isLastChild
       })
     },
-    arrowClass () {
-      return Utils.makeClassList({
-        'am-list-arrow-vertical': this.arrow === 'down',
-        'am-list-arrow-vertical-up': this.arrow === 'up'
-      })
-    },
+    // arrowClass () {
+    //   return Utils.makeClassList({
+    //     'am-list-arrow-vertical': this.arrow === 'down',
+    //     'am-list-arrow-vertical-up': this.arrow === 'up'
+    //   })
+    // },
     contentTextClass () {
       return Utils.makeClassList({
         'am-list-content-text-disabled': this.titleDisabled

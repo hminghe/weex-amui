@@ -17,7 +17,7 @@ const props = () => ({
   },
   arrow: {
     type: String,
-    default: 'horizontal'
+    default: 'right'
   },
   thumb: {
     type: String,

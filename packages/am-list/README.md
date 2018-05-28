@@ -67,7 +67,7 @@
 | **`titleNumber`** | `number` | `N` | `0`  | 标题的文字个数，`0` 不限制，可用 `2-7` 之间的数字	 |
 | **`titleDisabled`** | `Boolean` | `N` | `false` | 标题禁用(字体颜色设置为`#bbb`) |
 | **`extra`** | `String` | `N` | `null` | 右边内容 |
-| **`arrow`** | `String` | `N` | `horizontal` | 箭头方向(右,上,下), 可选`horizontal`,`up`,`down`,`empty`，如果是`empty`不显示 |
+| **`arrow`** | `String` | `N` | `right` | 箭头方向(右,上,下), 可选`right`,`up`,`down`,`empty`，如果是`empty`不显示 |
 | **`brief`** | `String` | `N` | `null` | 辅助说明，在标题下方 |
 | **`align`** | `String` | `N` | `null` | 子元素垂直对齐，可选`top`,`middle`,`bottom`	 |
 | **`tapActive`** | `Boolean` | `N` | `true` | 按下效果 |
