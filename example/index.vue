@@ -91,6 +91,10 @@
           @click="handleClick('am-picker-view')"
         />
         <am-list-item
+          title="am-picker 选择器"
+          @click="handleClick('am-picker')"
+        />
+        <am-list-item
           title="am-html HTML"
           @click="handleClick('am-html')"
         />
@@ -133,7 +137,7 @@ export default {
       }
       console.log('url', url)
       navigator.push({
-        url: url,
+        url: `${url}?_wx_tpl=${url}`,
         animated: 'true'
       })
     }

@@ -3,7 +3,8 @@
 @navbar-height: 45 * @hd;
 
 .am-nav-bar {
-  align-items: center;
+  // align-items: center;
+  align-items: stretch;
   height: @navbar-height;
   background-color: @brand-primary;
   flex-direction: row;
@@ -12,13 +13,15 @@
   &-title,
   &-right {
     flex: 1;
-    align-items: center;
+    align-items: stretch;
+    // align-items: center;
     flex-direction: row;
   }
 
   &-title {
     text-align: center;
-    justify-content: center;
+    align-self: center;
+    // justify-content: center;
     font-size: 18 * @hd;
     white-space: nowrap;
     color: @fill-base;
@@ -30,7 +33,7 @@
   }
 
   &-btn {
-    height: @navbar-height;
+    // height: @navbar-height;
     min-width: @navbar-height;
     padding-left: 11.5 * @hd;
     padding-right: 11.5 * @hd;
@@ -52,7 +55,7 @@
 
   &-light {
     background-color: @fill-base;
-    color: @brand-primary;
+    
     &-title {
       color: @color-text-base;
     }
@@ -61,11 +64,8 @@
       &:active {
         background-color: @fill-tap;
       }
-      &-icon {
-        color: @color-text-base;
-      }
-      &-text {
-        color: @color-text-base;
+      &-icon, &-text {
+        color: @brand-primary;
       }
     }
   }

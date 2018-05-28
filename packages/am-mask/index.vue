@@ -106,6 +106,7 @@ export default {
 <style>
 .am-mask {
   position: fixed;
+  z-index: 100;
   left: 0;
   top: 0;
   bottom: 0;

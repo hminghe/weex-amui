@@ -185,6 +185,7 @@ export default {
 }
 .am-popup-wrap {
   position: fixed;
+  z-index: 101;
   overflow: hidden;
   /* transition-property: height, width;
   transition-duration: 0.2s;

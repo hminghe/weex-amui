@@ -12,7 +12,7 @@
 
 <script>
 import Col from './col.vue'
-import { Utils } from '../..'
+import Utils from '../utils'
 
 export default {
   name: 'am-picker-view',
@@ -109,7 +109,7 @@ export default {
           }
         }
       }
-      this.$emit('input', this.selectedValue)
+
       this.$emit('change', this.selected)
     }
   },
@@ -120,6 +120,11 @@ export default {
     value (val) {
       if (val.join() !== this.selectedValue.join()) {
         this.init()
+      }
+    },
+    selectedValue (val) {
+      if (val.join() !== this.value.join()) {
+        this.$emit('input', this.selectedValue)
       }
     },
     data () {
