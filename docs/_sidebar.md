@@ -24,6 +24,7 @@
     - [am-icon 图标](packages/am-icon/)
     - [am-list 列表](packages/am-list/)
     - [am-picker-view 选择器](packages/am-picker-view/)
+    - [am-picker 选择器](packages/am-picker/)
     - [am-html HTML](packages/am-html/)
 
 - 反馈

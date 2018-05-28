@@ -4883,10 +4883,6 @@ performance-now@^0.2.0:
   version "0.2.0"
   resolved "http://registry.npm.taobao.org/performance-now/download/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
 
-phantom-limb@0.0.1:
-  version "0.0.1"
-  resolved "http://registry.npm.taobao.org/phantom-limb/download/phantom-limb-0.0.1.tgz#e97ee13cb60bc989c3914b7a88b147c0b2a48675"
-
 pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"
   resolved "http://registry.npm.taobao.org/pify/download/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
