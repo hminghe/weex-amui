@@ -1,9 +1,13 @@
 {
   "name": "weex-amui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "index.js",
   "description": "Ant Design Mobile of Weex",
   "author": "minghe",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hminghe/weex-amui.git"
+  },
   "files": [
     "packages",
     "theme",
