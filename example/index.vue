@@ -95,6 +95,14 @@
           @click="handleClick('am-picker')"
         />
         <am-list-item
+          title="am-date-picker-view 日期选择器"
+          @click="handleClick('am-date-picker-view')"
+        />
+        <am-list-item
+          title="am-date-picker 日期选择器"
+          @click="handleClick('am-date-picker')"
+        />
+        <am-list-item
           title="am-html HTML"
           @click="handleClick('am-html')"
         />

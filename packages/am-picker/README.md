@@ -88,6 +88,12 @@
 
 - 注1：普通：`Array{Array<{value, label}>}`， 联动： `Array<{value, label, children: Array}>`。详细结构可以参考 [这里](https://github.com/HMingHe/weex-amui/blob/master/example/picker-view/data.js)
 
+### Events
+| Event	 | Description | Parameters |
+| ---- |:----------:|:----:|
+| **`ok`** | `点击确定` | `(values, labels)` |
+| **`hide`** | `隐藏时回调` | `(type)`, type=`dismiss`或者`ok` |
+
 ### Slots
 | Name | Required | Description |
 | ---- |:---:|:----------:|
@@ -95,7 +101,7 @@
 
 ### Scoped Slot 
 ```
-自定义子组件的内容，参数为 { extra: String, open: Function }
+自定义子组件的内容，参数为 { extra: String, show: Function }
 extra：格式化选中的值	
 show：显示方法，调用后显示picker
 <am-list-item

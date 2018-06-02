@@ -25,6 +25,8 @@
     - [am-list 列表](packages/am-list/)
     - [am-picker-view 选择器](packages/am-picker-view/)
     - [am-picker 选择器](packages/am-picker/)
+    - [am-date-picker-view 日期选择器](packages/am-date-picker-view/)
+    - [am-date-picker 日期选择器](packages/am-date-picker/)
     - [am-html HTML](packages/am-html/)
 
 - 反馈

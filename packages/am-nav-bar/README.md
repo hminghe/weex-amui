@@ -53,7 +53,7 @@
   {
     is: String, // icon 或者 text
     type: String, // is="icon" 才有，对应 <am-icon/> 组件的 type
-    text: String, // is="text" 才有，显示的方法
+    text: String, // is="text" 才有，显示的文字
     key: Any, // @click 事件返回的参数，如果不设置返回 type 或者 text。不要设置 key="title" 会和标题的key冲突
     onClick: Function // 点击触发的方法， 如果设置了 onClick，不会触发组件的 @click 事件
   },
