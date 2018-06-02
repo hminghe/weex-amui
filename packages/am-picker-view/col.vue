@@ -6,15 +6,18 @@
     @panend="scrollHanders.touchend"
   >
     <div ref="content" class="am-picker-col-content">
-      <div
-        ref="item"
-        v-for="(item, index) in data"
-        :key="item.value"
-      >
-        <text
-          :class="['am-picker-col-item', selected === index ? 'am-picker-col-item-selected' : '']"
-        >{{item.label}}</text>
-      </div>
+      <template v-if="isWeb">
+        <div
+          ref="item"
+          v-for="(item, index) in data"
+          :key="item.value"
+        >
+          <text
+            :class="['am-picker-col-item', selected === index ? 'am-picker-col-item-selected' : '']"
+          >{{item.label}}</text>
+        </div>
+      </template>
+      <text v-else ref="items" class="am-picker-col-items">{{items}}</text>
     </div>
     <div class="am-picker-col-mask">
       <div class="am-picker-col-mask-top"></div>
@@ -27,6 +30,7 @@
 <script>
 import Utils from '../utils'
 const animation = weex.requireModule('animation')
+let itemHeight = Utils.isWeb() ? 68 : null
 
 export default {
   name: 'am-picker-view-col',
@@ -35,16 +39,17 @@ export default {
       type: Array, // Array<{value, label}>
       default: () => []
     },
-    value: null,
-    isWeb: Utils.isWeb()
+    value: null
   },
   data () {
     let selected = this.data.indexOf(this.value)
     if (selected < 0) selected = 0
     return {
       selected: selected,
-      itemHeight: 68,
-      scrollHanders: {}
+      itemHeight: itemHeight || 68,
+      scrollHanders: {},
+      isWeb: Utils.isWeb(),
+      isAndroid: Utils.isAndroid()
     }
   },
   created () {
@@ -54,11 +59,10 @@ export default {
       let startY = 0
       let scrollDisabled = false
       let isMoving = false
-      let isAnimation = false
       // let animationIntervalId = 0
 
       const setAnimation = (ref, styles, timingFunction = 'linear', duration = 0, callback = null) => {
-        isAnimation = true
+        (duration && this.isAndroid) && (scrollDisabled = true)
         animation.transition(ref, {
           styles,
           duration: duration, // ms
@@ -66,7 +70,8 @@ export default {
           needLayout: false,
           delay: 0 // ms
         }, () => {
-          isAnimation = false
+          (duration && this.isAndroid) && (scrollDisabled = false)
+
           if (typeof callback === 'function') {
             callback()
           }
@@ -75,8 +80,7 @@ export default {
 
       const scrollingComplete = () => {
         if (!isMoving && scrollY >= 0) {
-          computeChildIndex(scrollY)
-          const index = computeChildIndex(scrollY, this.itemHeight, this.$refs.item.length)
+          const index = computeChildIndex(scrollY, this.itemHeight, this.data.length)
           this.selected = index
         }
       }
@@ -87,7 +91,7 @@ export default {
           setAnimation(
             this.$refs.content,
             {transform: `translateY(${-scrollY}px)`},
-            'cubic-bezier(0,0,0.2,1.15)',
+            time === 0 ? 'linear' : 'cubic-bezier(0,0,0.2,1.15)',
             time * 1000,
             scrollingComplete
           )
@@ -122,7 +126,7 @@ export default {
         isMoving = false
         let targetY = scrollY
 
-        const height = (this.$refs.item.length - 1) * this.itemHeight
+        const height = (this.data.length - 1) * this.itemHeight
 
         let time = 0.3
 
@@ -147,7 +151,7 @@ export default {
       }
 
       const onStart = y => {
-        if (scrollDisabled || (!this.isWeb && isAnimation)) {
+        if (scrollDisabled) {
           return
         }
 
@@ -171,7 +175,7 @@ export default {
       const onScrollChange = () => {
         // const top = scrollHanders.getValue()
         // if (top >= 0) {
-        //   const item = this.$refs.item
+        //   const item = this.data
         //   const index = computeChildIndex(top, this.itemHeight, item.length)
         //   if (this.scrollValue !== index) {
         //     this.scrollValue = index
@@ -223,6 +227,17 @@ export default {
   },
   mounted () {
     this.selected > 0 && this.scrollToItem(this.selected)
+    if (!itemHeight) {
+      let sid = setInterval(() => {
+        weex.requireModule('dom').getComponentRect(this.$refs.items, (options) => {
+          if (options.result) {
+            clearInterval(sid)
+            itemHeight = this.itemHeight = options.size.height / this.data.length
+            this.scrollToItem(this.selected)
+          }
+        })
+      }, 500)
+    }
   },
   methods: {
     getItemIndex (value) {
@@ -235,7 +250,7 @@ export default {
       }
       return 0
     },
-    scrollToItem (index, time = undefined) {
+    scrollToItem (index, time = 0) {
       if (index < 0) index = 0
       this.scrollHanders.scrollTo(0, index * this.itemHeight, time)
     }
@@ -250,6 +265,11 @@ export default {
       if (val !== this.data[this.selected]) {
         this.scrollToItem(this.data.indexOf(val))
       }
+    }
+  },
+  computed: {
+    items () {
+      return this.data.map(item => item.value).join('\n')
     }
   }
 }

@@ -54,12 +54,14 @@ export default {
       while (current && Array.isArray(current) && current.length) {
         this.currentData.push(current)
 
-        this.value[index] !== undefined && current.some(item => {
-          if (item.value === this.value[index]) {
-            this.selected[index] = item
-            return true
-          }
-        })
+        if (this.value && this.value[index] !== undefined) {
+          current.some(item => {
+            if (item.value === this.value[index]) {
+              this.selected[index] = item
+              return true
+            }
+          })
+        }
 
         if (!this.selected[index]) {
           this.selected[index] = current[0]
@@ -123,7 +125,7 @@ export default {
       }
     },
     selectedValue (val) {
-      if (val.join() !== this.value.join()) {
+      if (this.value && val.join() !== this.value.join()) {
         this.$emit('input', this.selectedValue)
       }
     },
