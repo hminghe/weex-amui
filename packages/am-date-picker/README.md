@@ -1,4 +1,4 @@
-# am-date-picker-view 日期选择
+# am-date-picker 日期选择
 
 > 用于选择日期或者时间。
 
