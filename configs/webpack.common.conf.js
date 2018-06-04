@@ -10,6 +10,8 @@ const isWin = /^win/.test(process.platform);
 const webEntry = {};
 const weexEntry = {};
 
+let filterFile = ''
+
 // Wraping the entry file for web.
 const getEntryFileContent = (entryPath, vueFilePath) => {
   let relativeVuePath = path.relative(path.join(entryPath, '../'), vueFilePath);
@@ -42,6 +44,7 @@ const getEntryFile = (dir) => {
   const directory = helper.root(dir);
   fs.readdirSync(directory).forEach((file) => {
     const fullpath = path.join(directory, file);
+    if (filterFile && fullpath.indexOf(filterFile) < 0) return;
     const stat = fs.statSync(fullpath);
     const extname = path.extname(fullpath);
     if (stat.isFile() && extname === '.vue') {

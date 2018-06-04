@@ -7,10 +7,47 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <style>
+    @media screen and (min-width: 1300px) {
+      .markdown-section {
+        margin: 0 30px;
+      }
+      .preview {
+        display: block;
+        position: fixed;
+        right: 30px;
+        top: 100px;
+      }
+      #preview { width: 750px; height: 1300px; transform: scale(0.4); transform-origin: top left; background-color: #f5f5f9; }
+      .mock-phone {position: relative;width: 320px;min-width: 320px;height: 645px;border: 2px solid #0088fb;border-radius: 30px;}
+      .mock-phone .inner {position: absolute;top: 50px;z-index: 26;left: 10px;width: 300px;height: 520px;border: 1px solid #0088fb;overflow: hidden;}
+      .mock-phone .inner iframe { width: 100%; height: 100%; margin: 0; }
+      .mock-phone  .camera { position: absolute; width: 10px; height: 10px; border-radius: 10px; background: #afddff; border: 1px solid #0088fb; top: 20px; left: 96px; }
+      .mock-phone  .earpiece { position: absolute; width: 70px; height: 8px; border-radius: 8px; background: #afddff; border: 1px solid #0088fb; top: 20px; left: 120px; }
+      .mock-phone .home-btn { position: absolute; width: 50px; height: 50px; border-radius: 50px; background: #afddff; border: 1px solid #0088fb; bottom: 10px; left: 50%; margin-left: -25px; }
+    }
+    .preview {
+      display: none
+    }
+
+  </style>
 </head>
 <body>
   <div id="app"></div>
+  <div class="preview">
+    <div class="mock-phone">
+      <div class="camera"></div>
+      <div class="earpiece"></div>
+      <div class="inner">
+        <iframe id="preview" src="./release/web/index.html" frameborder="0"></iframe>
+      </div>
+      <div class="home-btn"></div>
+    </div>
+  </div>
   <script>
+    var preivewPath = './release/web/'
+    var nativePath = document.URL.split('#')[0] + 'release/native/'
+    var previewEl = document.getElementsByClassName('preview')[0]
     window.$docsify = {
       name: 'Weex AMUI',
       repo: '',
@@ -25,17 +62,38 @@
         '/': '#/'
       },
       alias: {
+        '/.*/_navbar.md': 'docs/_navbar.md',
+        '/packages/.*/_sidebar.md': 'docs/_sidebar.md',
       },
       basePath: location.port === '3000' ? '/' : '/weex-amui/',
       plugins: [
         function (hook, vm) {
           hook.beforeEach(function (html) {
-            console.log(vm.route.file)
+            if (vm.route.file.indexOf('packages/am-') === 0) {
+              var url = preivewPath + vm.route.file.split('/')[1].replace('am-', '') + '/index.html'
+              document.getElementById('preview').src = url
+              previewEl.style.display = 'block'
+            } else {
+              previewEl.style.display = 'none'
+            }
+            // console.log(html)
+          })
+          hook.afterEach(function (html) {
+            if (vm.route.file.indexOf('packages/am-') === 0) {
+
+              var url = nativePath + vm.route.file.split('/')[1].replace('am-', '') + '/index.js'
+              var QR = qrcode(0, 'L')
+              QR.addData(url)
+              QR.make()
+              html = html.replace('</blockquote>', '</blockquote><div><a target="_blank" href="'+url+'">'+QR.createImgTag(6, 12)+'</a></div>')
+            }
+            return html
           })
         }
       ]
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="./docs/assets/qrcode.js"></script>
 </body>
 </html>
