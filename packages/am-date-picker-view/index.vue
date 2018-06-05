@@ -1,6 +1,6 @@
 <script>
 import AmPickerView from '../am-picker-view'
-import dateUtil from '../Utils/date'
+import dateUtil from '../utils/date'
 import props from './props'
 
 const TYPE_MAP = {
