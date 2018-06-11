@@ -269,7 +269,7 @@ export default {
   },
   computed: {
     items () {
-      return this.data.map(item => item.value).join('\n')
+      return this.data.map(item => item.label).join('\n')
     }
   }
 }
