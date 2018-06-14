@@ -3,6 +3,7 @@
     - [am-wing-blank 两翼留白](packages/am-wing-blank/)
     - [am-white-space 上下留白](packages/am-white-space/)
     - [am-mask 遮罩层](packages/am-mask/)
+    - [am-tab-container 多面板](packages/am-tab-container/)
 
 - 导航
     - [am-nav-bar 导航栏](packages/am-nav-bar/)

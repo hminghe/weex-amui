@@ -22,6 +22,9 @@
           title="am-mask 遮罩层"
           @click="handleClick('am-mask')"
         />
+        <am-list-item
+          title="am-tab-container 多面板"
+        />
       </am-list>
       <am-list header="导航">
         <am-list-item

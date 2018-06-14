@@ -19,6 +19,8 @@ import AmTabBar from './packages/am-tab-bar'
 import AmTabBarItem from './packages/am-tab-bar-item'
 import AmSegmentedControl from './packages/am-segmented-control'
 import AmTabs from './packages/am-tabs'
+import AmTabContainer from './packages/am-tab-container'
+import AmTabContainerItem from './packages/am-tab-container-item'
 import AmPickerView from './packages/am-picker-view'
 import AmPicker from './packages/am-picker'
 import AmHtml from './packages/am-html'
@@ -49,6 +51,8 @@ export {
   AmTabBarItem,
   AmSegmentedControl,
   AmTabs,
+  AmTabContainer,
+  AmTabContainerItem,
   AmPickerView,
   AmPicker,
   AmHtml,
