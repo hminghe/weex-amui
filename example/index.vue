@@ -24,6 +24,11 @@
         />
         <am-list-item
           title="am-tab-container 多面板"
+          @click="handleClick('am-tab-container')"
+        />
+        <am-list-item
+          title="am-image 图片"
+          @click="handleClick('am-image')"
         />
       </am-list>
       <am-list header="导航">

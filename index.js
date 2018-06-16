@@ -28,6 +28,7 @@ import AmMask from './packages/am-mask'
 import AmPopup from './packages/am-popup'
 import AmDatePickerView from './packages/am-date-picker-view'
 import AmDatePicker from './packages/am-date-picker'
+import AmImage from './packages/am-image'
 
 export {
   Utils,
@@ -59,5 +60,6 @@ export {
   AmMask,
   AmPopup,
   AmDatePickerView,
-  AmDatePicker
+  AmDatePicker,
+  AmImage
 }
