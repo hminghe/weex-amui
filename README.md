@@ -53,6 +53,12 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
         "libDir": "packages",
         "style": false
       }
+      // 如果要和 weex-ui 一起用，配置加上下面这个
+      ,{
+        "libraryName": "weex-ui",
+        "libDir": "packages",
+        "style": false
+      }
     ]
   ]
 }
