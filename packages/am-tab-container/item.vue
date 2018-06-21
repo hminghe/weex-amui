@@ -25,7 +25,7 @@ export default {
       }
       let style = this.$slots.default[0].data.style || {}
       style.width = width
-      style.overflow = 'hidden'
+      style.overflowX = 'hidden'
       return style
     }
   },
