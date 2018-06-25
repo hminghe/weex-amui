@@ -33,6 +33,15 @@ export default {
       default () {
         return {}
       }
+    },
+    noBorder: {
+      type: Boolean,
+      default: false
+    }
+  },
+  provide () {
+    return {
+      noBorder: this.noBorder
     }
   }
 }

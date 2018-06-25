@@ -12,6 +12,20 @@
             extra="extra content"
           ></am-list-item>
         </am-list>
+        <am-list
+          header="没有边框"
+          footer="Footer"
+          no-border
+        >
+          <am-list-item
+            title="标题"
+            extra="extra content"
+          ></am-list-item>
+          <am-list-item
+            title="标题"
+            extra="extra content"
+          ></am-list-item>
+        </am-list>
         <am-list header="am-list-input">
           <am-list-input v-model="inputValue" title="标题" placeholder="请输入内容"></am-list-input>
           <am-list-input v-model="inputValue" title="" placeholder="没有标题"></am-list-input>

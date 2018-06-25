@@ -50,6 +50,7 @@ export default {
       // arrowUrl: arrowUrl
     }
   },
+  inject: ['noBorder'],
   computed: {
     showArrow () {
       return this.arrow && this.arrow !== 'empty'
@@ -57,12 +58,13 @@ export default {
     itemClass () {
       return Utils.makeClassList({
         'am-list-item-tap': this.tapActive,
-        'am-list-item-first': this._isFirstChild,
-        'am-list-item-last': this._isLastChild
+        'am-list-item-first': !this.noBorder && this._isFirstChild,
+        'am-list-item-last': !this.noBorder && this._isLastChild
       })
     },
     lineClass () {
       return Utils.makeClassList({
+        'am-list-line-border': !this.noBorder,
         'am-list-line-align-top': this.align === 'top',
         'am-list-line-align-middle': this.align === 'middle',
         'am-list-line-align-bottom': this.align === 'bottom',
