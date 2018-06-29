@@ -46,6 +46,7 @@
 | **`footer`** | `String` | `N` | `null`  | 底部文字 |
 | **`headerStyle`** | `Object` | `N` | `{}` | 头部样式 |
 | **`footerStyle`** | `Object` | `N` | `{}` | 底部样式 |
+| **`noBorder`** | `Boolean` | `N` | `false` | 不要边框 |
 
 ### Slots
 | Name | Required | Description |

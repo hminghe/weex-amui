@@ -37,7 +37,7 @@ npm i weex-amui -S
 npm i less less-loader -D
 ```
 
-- 安装 [babel-plugin-component](https://www.npmjs.com/package/babel-plugin-component) 来只引入需要的组件打包，同时如果没有安装 `babel-preset-stage-0`，也需要一并安装。
+- 安装 [babel-plugin-component](https://www.npmjs.com/package/babel-plugin-component) 来只引入需要的组件打包，同时如果没有安装 `babel-preset-stage-0`，也需要一并安装。[eros用户跳过这一步，点这里看](#eros-用户)
 ```shell
 npm i babel-preset-stage-0 babel-plugin-component  -D
 ```
@@ -67,6 +67,23 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 - 如果你使用了 `weex-vue-render@1.x` 版本（现在使用 `weex-toolkit` 创建的项目可选`0.x`和`1.x`），1.x版本依赖的 `weex-vue-precompiler` 当前版本会把自定义组件的 `click`, `change` 等事件处理出错，需要安装一下另外一个修改的版本。
 ```shell
 npm i https://github.com/HMingHe/weex-vue-precompiler.git -D
+```
+
+## eros 用户
+- 请修改 `.babelrc` 文件，如下：
+```json
+{
+  ...
+  "plugins": [
+    ["import",[
+      {
+        "libraryName": "weex-amui",
+        "libraryDirectory": "packages",
+        "style": false
+      }
+    ]
+  ...
+}
 ```
 
 
