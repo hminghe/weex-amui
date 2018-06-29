@@ -30,7 +30,41 @@
 <script>
 import Utils from '../utils'
 const animation = weex.requireModule('animation')
-let itemHeight = Utils.isWeb() ? 68 : null
+const dom = weex.requireModule('dom')
+
+const itemLineHeight = {
+  _callbackList: [],
+  value: Utils.isAndroid() ? null : 68,
+  status: Utils.isAndroid() ? 0 : 2, // 0: 没有，1：计算中, 2:完成
+  compute (vm) {
+    if (this.status >= 1) return
+    this.status = 1
+    let sid = setInterval(() => next(), 100)
+
+    let next = () => {
+      dom.getComponentRect(vm.$refs.items, (options) => {
+        if (options.result && options.size.height) {
+          this.finish(options.size.height / vm.data.length)
+        } else {
+          setTimeout(() => next(), 100)
+        }
+      })
+      clearInterval(sid)
+    }
+  },
+  onFinish (callback) {
+    if (this.status === 2) {
+      callback(this.value)
+    } else {
+      this._callbackList.push(callback)
+    }
+  },
+  finish (height) {
+    this.status = 2
+    this.value = height
+    this._callbackList.forEach(callback => callback(height))
+  }
+}
 
 export default {
   name: 'am-picker-view-col',
@@ -46,7 +80,7 @@ export default {
     if (selected < 0) selected = 0
     return {
       selected: selected,
-      itemHeight: itemHeight || 68,
+      itemHeight: itemLineHeight.value || 68,
       scrollHanders: {},
       isWeb: Utils.isWeb(),
       isAndroid: Utils.isAndroid()
@@ -227,16 +261,12 @@ export default {
   },
   mounted () {
     this.selected > 0 && this.scrollToItem(this.selected)
-    if (!itemHeight) {
-      let sid = setInterval(() => {
-        weex.requireModule('dom').getComponentRect(this.$refs.items, (options) => {
-          if (options.result) {
-            clearInterval(sid)
-            itemHeight = this.itemHeight = options.size.height / this.data.length
-            this.scrollToItem(this.selected)
-          }
-        })
-      }, 500)
+    if (this.isAndroid) {
+      itemLineHeight.compute(this)
+      itemLineHeight.onFinish(height => {
+        this.itemHeight = height
+        this.scrollToItem(this.selected)
+      })
     }
   },
   methods: {
