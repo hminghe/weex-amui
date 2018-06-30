@@ -4,6 +4,7 @@
     - [am-white-space 上下留白](packages/am-white-space/)
     - [am-mask 遮罩层](packages/am-mask/)
     - [am-tab-container 多面板](packages/am-tab-container/)
+    - [am-native-tab-container 多面板（native）](packages/am-native-tab-container/)
     - [am-image 图片](packages/am-image/)
 
 - 导航
