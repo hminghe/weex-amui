@@ -27,6 +27,10 @@
           @click="handleClick('am-tab-container')"
         />
         <am-list-item
+          title="am-native-tab-container 多面板(native)"
+          @click="handleClick('am-native-tab-container')"
+        />
+        <am-list-item
           title="am-image 图片"
           @click="handleClick('am-image')"
         />

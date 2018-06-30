@@ -141,14 +141,18 @@
 ### 可配置参数
 | Prop	 | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:|:----------:|
-| **`index`** | `Number` | `Y` | `0` | 当前面板 |
-| **`animation`** | `Boolean` | `N` | `true` | 切换动画 |
+| **`index`** | `Number` | `Y` | `0` | 当前面板，可以用 `.sync` 同步 |
 | **`width`** | `Number` | `N` | `750` | 宽度，默认是750满屏 |
 
 ### Slots
 | Name | Required | Description |
 | ---- |:---:|:----------:|
 | **`default`** | `Y` | 一般放 `<am-native-tab-container/>` |
+
+### Events
+| Event	 | Description | Parameters |
+| ---- |:----------:|:----:|
+| **`change`** | `切换页面时触发` | `(index)` |
 
 
 ### am-native-tab-container-item
