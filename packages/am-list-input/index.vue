@@ -214,6 +214,7 @@ export default {
   },
   mounted () {
     console.log(this.$listeners)
+    this.inputValue = this.value
   }
 }
 </script>
