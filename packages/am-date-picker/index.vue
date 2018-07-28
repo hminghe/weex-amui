@@ -5,7 +5,7 @@
       :show="currentShow"
       :auto-close="false"
       @clickMask="handleMaskClick"
-      :height="562"
+      :height="popupHeight"
     >
       <am-nav-bar
         class="am-picker-header"
@@ -30,6 +30,7 @@ import AmPopup from '../am-popup'
 import AmNavBar from '../am-nav-bar'
 import AmDatePickerView from '../am-date-picker-view'
 import ListItemMixin from '../am-list/item-mixin'
+import Utils from '../utils'
 const prpos = require('../am-date-picker-view/props.js').default()
 
 export default {
@@ -67,7 +68,8 @@ export default {
     return {
       currentShow: this.show,
       currentValue: this.value || '',
-      selected: null
+      selected: null,
+      isIPhoneX: Utils.isIPhoneX()
     }
   },
   computed: {
@@ -82,6 +84,9 @@ export default {
     },
     extra () {
       return this.currentValue || this.value || this.placeholder
+    },
+    popupHeight () {
+      return 562 + (this.isIPhoneX ? 78 : 0)
     }
   },
   methods: {

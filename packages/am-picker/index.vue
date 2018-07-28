@@ -5,7 +5,7 @@
       :show="currentShow"
       :auto-close="false"
       @clickMask="handleMaskClick"
-      :height="562"
+      :height="popupHeight"
     >
       <am-nav-bar
         class="am-picker-header"
@@ -78,7 +78,8 @@ export default {
     return {
       currentShow: this.show,
       currentValue: this.value || [],
-      selected: null
+      selected: null,
+      isIPhoneX: Utils.isIPhoneX()
     }
   },
   computed: {
@@ -87,6 +88,9 @@ export default {
     },
     extra () {
       return this.format(this.lables) || this.placeholder
+    },
+    popupHeight () {
+      return 562 + (this.isIPhoneX ? 78 : 0)
     }
   },
   methods: {

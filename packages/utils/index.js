@@ -15,10 +15,10 @@ const Utils = {
    */
   isIPhoneX () {
     const { deviceHeight } = weex.config.env
-    if (Utils.env.isWeb()) {
+    if (this.isWeb()) {
       return typeof window !== 'undefined' && window.screen && window.screen.width && window.screen.height && (parseInt(window.screen.width, 10) === 375) && (parseInt(window.screen.height, 10) === 812)
     }
-    return Utils.env.isIOS() && deviceHeight === 2436
+    return this.isIOS() && deviceHeight === 2436
   },
   isAndroid () {
     const { platform } = weex.config.env
