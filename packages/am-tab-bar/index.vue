@@ -48,5 +48,5 @@ export default {
 </script>
 
 <style  scoped lang="less">
-@import "../../theme/am-tab-bar/index.less";
+@import "~../../theme/am-tab-bar/index.less";
 </style>

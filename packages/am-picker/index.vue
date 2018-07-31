@@ -159,5 +159,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import "../../theme/am-picker/index.less";
+@import "~../../theme/am-picker/index.less";
 </style>

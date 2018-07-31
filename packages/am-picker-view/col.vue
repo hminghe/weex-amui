@@ -306,6 +306,6 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../theme/am-picker/col.less';
+@import '~../../theme/am-picker/col.less';
 
 </style>

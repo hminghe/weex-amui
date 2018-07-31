@@ -137,6 +137,6 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../theme/am-picker/view.less';
+@import '~../../theme/am-picker/view.less';
 
 </style>

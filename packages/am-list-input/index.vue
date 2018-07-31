@@ -220,5 +220,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import "../../theme/am-list/input.less";
+@import "~../../theme/am-list/input.less";
 </style>

@@ -15,5 +15,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import "../../theme/am-white-space/index.less";
+@import "~../../theme/am-white-space/index.less";
 </style>

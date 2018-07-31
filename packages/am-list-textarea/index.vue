@@ -220,5 +220,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import "../../theme/am-list/textarea.less";
+@import "~../../theme/am-list/textarea.less";
 </style>

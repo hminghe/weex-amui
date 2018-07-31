@@ -83,5 +83,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import "../../theme/am-button/index.less";
+@import "~../../theme/am-button/index.less";
 </style>

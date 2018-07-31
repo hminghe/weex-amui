@@ -93,5 +93,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import "../../theme/am-list/item.less";
+@import "~../../theme/am-list/item.less";
 </style>

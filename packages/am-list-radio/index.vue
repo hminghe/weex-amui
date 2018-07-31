@@ -96,5 +96,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import "../../theme/am-list/radio.less";
+@import "~../../theme/am-list/radio.less";
 </style>

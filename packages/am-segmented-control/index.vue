@@ -78,5 +78,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import "../../theme/am-segmented-control/index.less";
+@import "~../../theme/am-segmented-control/index.less";
 </style>

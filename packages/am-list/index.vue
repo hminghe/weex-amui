@@ -48,6 +48,6 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import "../../theme/am-list/index.less";
+@import "~../../theme/am-list/index.less";
 
 </style>

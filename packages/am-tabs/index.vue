@@ -120,5 +120,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import "../../theme/am-tabs/index.less";
+@import "~../../theme/am-tabs/index.less";
 </style>

@@ -17,5 +17,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import "../../theme/am-wing-blank/index.less";
+@import "~../../theme/am-wing-blank/index.less";
 </style>

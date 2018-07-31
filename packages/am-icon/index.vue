@@ -66,5 +66,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import "../../theme/am-icon/index.less";
+@import "~../../theme/am-icon/index.less";
 </style>
