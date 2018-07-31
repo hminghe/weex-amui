@@ -11,7 +11,7 @@ resolve: {
 	extensions: ['.js', '.vue', '.json'],
 	alias: {
 		'@': helper.resolve('src'),
-		'./var`iable.less': 'src/theme/variable.less' // 'src/theme' 要修改成你自己的目录
+		'./var`iable.less': helper.resolve('src/theme/') + 'variable.less' // 'src/theme' 要修改成你自己的目录
 	} 
 }
 ```
@@ -24,7 +24,7 @@ resolve: {
 	extensions: ['.js', '.vue', '.json'],
 	alias: {
 		'@': helper.resolve('src'),
-		'../../theme/am-button': 'src/theme/am-button' 
+		'../../theme/am-button': helper.resolve('src/theme/am-button')
 		// 'src/theme/am-button' 要修改成你自己的目录
 	} 
 }
@@ -38,7 +38,7 @@ resolve: {
 	extensions: ['.js', '.vue', '.json'],
 	alias: {
 		'@': helper.resolve('src'),
-		'../../theme': 'src/theme' // 'src/theme' 要修改成你自己的目录
+		'../../theme': helper.resolve('src/theme') // 'src/theme' 要修改成你自己的目录
 	} 
 }
 ```
