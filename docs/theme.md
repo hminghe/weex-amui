@@ -11,7 +11,7 @@ resolve: {
 	extensions: ['.js', '.vue', '.json'],
 	alias: {
 		'@': helper.resolve('src'),
-		'./var`iable.less': helper.resolve('src/theme/') + 'variable.less' // 'src/theme' 要修改成你自己的目录
+		'./variable.less': helper.resolve('src/theme/') + 'variable.less' // 'src/theme' 要修改成你自己的目录
 	} 
 }
 ```
@@ -42,3 +42,17 @@ resolve: {
 	} 
 }
 ```
+
+### eros设置
+修改`config/eros.dev.js` 文件里的 `alias`,如下:
+```js
+var path = require('path')
+module.exports = {
+	'alias': {
+		'./variable.less':  path.join(process.cwd(), 'src/theme/base/variable.less'), // 变量修改
+		'../../theme/am-button': path.join(process.cwd(), 'src/theme/am-button'), // 修改单个组件
+		'../../theme': path.join(process.cwd(), 'src/theme') // 修改全部组件
+	}
+}
+```
+> 上面的value要修改为自己的实际目录, key不要变。默认主题下载：https://github.com/hminghe/weex-amui/blob/master/theme/
