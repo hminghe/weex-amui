@@ -19,6 +19,7 @@
         ref="pickerView"
         :value="currentValue"
         v-bind="datePickerViewPrpos"
+        @input="handleHeaderChange"
       ></am-date-picker-view>
     </am-popup>
     <slot :extra="extra" :show="() => {currentShow = true}"></slot>
@@ -108,6 +109,9 @@ export default {
           this.close('dismiss')
           break
       }
+    },
+    handleHeaderChange () {
+      this.$emit('change', this.$refs.pickerView.strDate)
     }
   },
   watch: {

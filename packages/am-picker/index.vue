@@ -18,6 +18,7 @@
       <am-picker-view
         :data="data"
         :value="currentValue"
+        @change="handlePickerChange"
         ref="pickerView"
       ></am-picker-view>
     </am-popup>
@@ -131,6 +132,11 @@ export default {
         case 'dismiss':
           this.close('dismiss')
           break
+      }
+    },
+    handlePickerChange () {
+      if (('change' in this.$listeners)) {
+        this.$emit('change', [...this.$refs.pickerView.selectedValue], this.$refs.pickerView.selected.map(item => item.label))
       }
     }
   },

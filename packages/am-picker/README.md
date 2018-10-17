@@ -93,6 +93,8 @@
 | ---- |:----------:|:----:|
 | **`ok`** | `点击确定` | `(values, labels)` |
 | **`hide`** | `隐藏时回调` | `(type)`, type=`dismiss`或者`ok` |
+| **`change`** | `改变时回调` | `(values, , labels)` |
+
 
 ### Slots
 | Name | Required | Description |

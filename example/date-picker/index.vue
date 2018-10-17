@@ -12,6 +12,7 @@
           v-model="value1"
           @ok="onOK"
           @hide="onHide"
+          @change="onChange"
         >
           <am-list-item
             slot-scope="{ extra, show }"
@@ -26,6 +27,7 @@
           format="YYYY-MM-DD"
           @ok="onOK"
           @hide="onHide"
+          @change="onChange"
           placeholder="点我选择"
         >
           <am-list-item
@@ -42,6 +44,7 @@
           format="YYYY年MM月"
           @ok="onOK"
           @hide="onHide"
+          @change="onChange"
           placeholder="点我选择"
         >
           <am-list-item
@@ -58,6 +61,7 @@
           format="HH:mm"
           @ok="onOK"
           @hide="onHide"
+          @change="onChange"
           placeholder="点我选择"
         >
           <am-list-item
@@ -102,6 +106,9 @@ export default {
     },
     onOK (value) {
       console.log('ok', value)
+    },
+    onChange (value) {
+      console.log('change', value)
     }
   }
 }

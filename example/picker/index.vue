@@ -10,6 +10,7 @@
           v-model="value1"
           @ok="onOK"
           @hide="onHide"
+          @change="onChange"
         >
           <am-list-item
             slot-scope="{ extra, show }"
@@ -42,6 +43,7 @@
           v-model="value3"
           @ok="onOK"
           @hide="onHide"
+          @change="onChange"
         >
           <template slot-scope="{ extra, show }">
             <am-wing-blank>
@@ -94,6 +96,9 @@ export default {
     },
     onOK (value, label) {
       console.log('ok', value, label)
+    },
+    onChange (value, label) {
+      console.log('change', value, label)
     }
   }
 }

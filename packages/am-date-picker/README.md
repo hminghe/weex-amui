@@ -68,6 +68,7 @@
 | ---- |:----------:|:----:|
 | **`ok`** | `点击确定` | `(value)`, value返回的格式与 `format` 属性一致 |
 | **`hide`** | `隐藏时回调` | `(type)`, type=`dismiss`或者`ok` |
+| **`change`** | `value改变时回调` | `(value)`, value返回的格式与 `format` 属性一致 |
 
 
 ### Slots
