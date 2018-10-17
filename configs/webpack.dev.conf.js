@@ -142,11 +142,10 @@ const devWebpackConfig = webpackMerge(commonConfig[0], {
     : false,
     proxy: config.dev.proxyTable,
     quiet: true, // necessary for FriendlyErrorsPlugin
-    openPage: openPage,
+    openPage: encodeURI(openPage),
     watchOptions: config.dev.watchOptions
   }
 });
-console.log('openPage', openPage);
 
 /**
  * Webpack configuration for weex.
@@ -176,7 +175,7 @@ module.exports = new Promise((resolve, reject) => {
       // Add FriendlyErrorsPlugin
       devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
         compilationSuccessInfo: {
-          messages: [`Your application is running here: http://${devWebpackConfig.devServer.host}:${port}`],
+          messages: [`Your application is running here: ${chalk.yellow(`http://${devWebpackConfig.devServer.public}/${openPage}`)}`],
         },
         onErrors: config.dev.notifyOnErrors
         ? utils.createNotifierCallback()

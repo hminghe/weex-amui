@@ -1,6 +1,6 @@
 {
   "name": "weex-amui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "description": "Ant Design Mobile of Weex",
   "author": "minghe",
@@ -30,6 +30,7 @@
   "keywords": [
     "vue",
     "weex",
+    "weex-ui",
     "antd",
     "ant-design-mobile",
     "antd-mobile"
@@ -82,9 +83,6 @@
     "webpack-merge": "^4.1.0",
     "webpack-uglify-parallel": "^0.1.4",
     "weex-loader": "^0.7.2",
-    "weex-vue-precompiler": "git+https://github.com/HMingHe/weex-vue-precompiler.git"
-  },
-  "optionalDependencies": {
-    "ios-deploy": "^1.9.0"
+    "weex-vue-precompiler": "git+https://github.com/hminghe/weex-vue-precompiler.git"
   }
 }

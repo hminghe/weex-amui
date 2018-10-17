@@ -1,6 +1,6 @@
 const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
-const ip = require('ip').address();
+// const ip = require('ip').address();
 const config = {
   root: ROOT,
   // webpack-dev-server
@@ -14,7 +14,7 @@ const config = {
   dev: {
     // Various Dev Server settings
     contentBase: ROOT,
-    host: ip,
+    host: '0.0.0.0',
     port: 8081,
     historyApiFallback: true,
     open: true,

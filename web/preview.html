@@ -57,7 +57,7 @@
         $preview.src = `/${page.replace('.js', '.html')}`;
       }
       if (entrys) {
-        var pageEntrys = decodeURI(entrys).replace('\\', '/').split('|');
+        var pageEntrys = decodeURI(entrys).replace(/\\/g, '/').split('|');
         var $pages = document.querySelector('.pages-box');
         var contents = '';
         pageEntrys.forEach(function(entry){

@@ -3554,10 +3554,6 @@ invert-kv@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/invert-kv/download/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
 
-ios-deploy@^1.9.0:
-  version "1.9.2"
-  resolved "http://registry.npm.taobao.org/ios-deploy/download/ios-deploy-1.9.2.tgz#c2f4c46b06db4771939b29f980c7c1a8906b47a2"
-
 ip@^1.1.0, ip@^1.1.5:
   version "1.1.5"
   resolved "http://registry.npm.taobao.org/ip/download/ip-1.1.5.tgz#bdded70114290828c0a039e72ef25f5aaec4354a"
