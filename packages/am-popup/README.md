@@ -47,5 +47,6 @@
 | **`width`** | `Number` | `N` | `750` | 弹出层的宽度(`position`=`left`或者`right`时有效) |
 | **`height`** | `Number` | `N` | `750` | 弹出层的高度(`position`=`top`或者`bottom`时有效) |
 | **`offset`** | `Object{top, left, right, bottom}` | `N` | `{}` | 弹出层的偏移量[注1] |
+| **`popupStyle`** | `Object` | `N` | `{}` | 自定义样式 |
 
 - 注1：`position=top`时`offset.bottom`无效，=`right`时`offset.left`无效，=`bottom`时`offset.top`，=`left时offset.right`无效。

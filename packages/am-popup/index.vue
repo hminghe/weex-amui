@@ -14,7 +14,7 @@
       @click="()=>{}"
       ref="wrap"
     >
-      <div class="am-popup" ref="popup" :style="popupStyle">
+      <div class="am-popup" ref="popup" :style="_popupStyle">
         <slot></slot>
       </div>
     </div>
@@ -54,6 +54,10 @@ export default {
     offset: {
       type: Object,
       default: () => ({})
+    },
+    popupStyle: {
+      type: Object,
+      default: () => ({})
     }
   },
   data () {
@@ -64,8 +68,9 @@ export default {
     }
   },
   computed: {
-    popupStyle () {
+    _popupStyle () {
       return {
+        ...this.popupStyle,
         transform: this.transformHide
       }
     },
