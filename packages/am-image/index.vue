@@ -87,6 +87,9 @@ export default {
           this.loaded = true
         })
       }
+    },
+    save (next = () => {}) {
+      typeof this.$refs.image.save === 'function' && this.$refs.image.save(next)
     }
   }
 }

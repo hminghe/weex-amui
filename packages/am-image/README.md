@@ -46,3 +46,8 @@
 ### Events
 
 - 注：如果要使用image的事件请添加 `.native`, 例如：`@click.native`, `@load.native`，image支持的事件请参考：[这里](http://weex.apache.org/cn/references/components/image.html#shi-jian)
+
+
+### Methods
+
+- 可以使用 `save` 方法， 请参考：[这里](http://weex.apache.org/cn/references/components/image.html#save-v0-16-0)
