@@ -19,7 +19,7 @@
             :style="_iconStyle"
             :src="item.icon"
           />
-          <text v-if="item.text" class="am-grid-text">{{item.text}}</text>
+          <text v-if="item.text" :style="textStyle" class="am-grid-text">{{item.text}}</text>
         </template>
       </div>
     </am-flex>
@@ -59,6 +59,12 @@ export default {
       }
     },
     iconStyle: {
+      type: Object,
+      default () {
+        return {}
+      }
+    },
+    textStyle: {
       type: Object,
       default () {
         return {}

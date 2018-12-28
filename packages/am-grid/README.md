@@ -48,6 +48,7 @@
 | **`hasLine`** | `Boolean` | `N` | `true` | 是否有边框 |
 | **`itemStyle`** | `Object` | `N` | `{}` | 每个格子自定义样式 |
 | **`iconStyle`** | `Object` | `N` | `{}` | 图片自定义样式 |
+| **`textStyle`** | `Object` | `N` | `{}` | 文字自定义样式 |
 
 ### 事件回调
 | Event	 | Description | Parameters |
