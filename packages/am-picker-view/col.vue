@@ -73,6 +73,9 @@ export default {
       type: Array, // Array<{value, label}>
       default: () => []
     },
+    textLength: {
+      type: Number
+    },
     value: null
   },
   data () {
@@ -299,7 +302,25 @@ export default {
   },
   computed: {
     items () {
-      return this.data.map(item => item.label).join('\n')
+      return this.data.map(item => {
+        if (item.label.length > this.textLength) {
+          let j = 0
+          for (let i = 0; i < item.label.length; i++) {
+            let code = item.label.charCodeAt(i)
+            if (code > 127 || code === 94) {
+              j += 1
+            } else {
+              j += 0.5
+            }
+            if (j >= this.textLength) {
+              console.log(i, this.textLength)
+              return item.label.slice(0, i + 1) + '...'
+            }
+          }
+        } else {
+          return item.label
+        }
+      }).join('\n')
     }
   }
 }

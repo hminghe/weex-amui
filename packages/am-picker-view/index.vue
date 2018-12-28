@@ -4,6 +4,7 @@
       v-for="(items, index) in currentData"
       :key="index"
       :data="items"
+      :text-length="textLength"
       :value="selected[index] || null"
       @input="item => onChange(item, index)"
     />
@@ -43,6 +44,9 @@ export default {
       return this.selected.map(item => {
         return item.value
       })
+    },
+    textLength () {
+      return parseInt(22 / this.currentData.length - 1)
     }
   },
   methods: {
