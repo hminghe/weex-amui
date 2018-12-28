@@ -13,18 +13,8 @@
     </template>
     <template slot="extra">
       <input
-        :class="inputClass"
         ref="input"
-        :placeholder="placeholder"
-        :style="inputStyle"
-        :disabled="computeDisabled"
-        :value="inputValue"
-        :return-key-type="returnKeyType"
-        :autofocus="autofocus"
-        :max-length="maxLength"
-        :max="max"
-        :min="min"
-        :type="type"
+        v-bind="inputBind"
         v-on="inputListeners"
       />
       <slot name="extra">
@@ -119,6 +109,34 @@ export default {
     }
   },
   computed: {
+    inputBind () {
+      let bind = {
+        class: this.inputClass,
+        style: this.inputStyle,
+        disabled: this.computeDisabled,
+        value: this.inputValue,
+        type: this.type
+      }
+      if (this.placeholder) {
+        bind.placeholder = this.placeholder
+      }
+      if (this.returnKeyType) {
+        bind.returnKeyType = this.returnKeyType
+      }
+      if (this.autofocus) {
+        bind.autofocus = this.autofocus
+      }
+      if (this.maxLength) {
+        bind.maxlength = this.maxLength
+      }
+      if (this.max) {
+        bind.max = this.max
+      }
+      if (this.min) {
+        bind.min = this.min
+      }
+      return bind
+    },
     inputListeners () {
       return Object.assign({},
         // 我们从父级添加所有的监听器
