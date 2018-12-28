@@ -75,9 +75,9 @@ export default {
   },
   methods: {
     handleLoad ($event) {
+      this.$emit('load', $event)
       if ($event.success && (this.autoWidth || this.autoHeight)) {
         dom.getComponentRect(this.$refs.image, option => {
-          console.log(option)
           if (!option.result) return
           if (this.autoWidth) {
             this.width = option.size.height / $event.size.naturalHeight * $event.size.naturalWidth
