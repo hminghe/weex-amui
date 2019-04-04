@@ -4,7 +4,7 @@
       v-for="(items, index) in currentData"
       :key="index"
       :data="items"
-      :text-length="textLength"
+      :text-length="_colTextMaxLength"
       :value="selected[index] || null"
       @input="item => onChange(item, index)"
     />
@@ -28,6 +28,10 @@ export default {
     value: {
       type: Array,
       default: null
+    },
+    colTextMaxLength: {
+      type: [Number, String],
+      default: 'auto'
     }
   },
   data () {
@@ -45,8 +49,8 @@ export default {
         return item.value
       })
     },
-    textLength () {
-      return parseInt(22 / this.currentData.length - 1)
+    _colTextMaxLength () {
+      return this.colTextMaxLength === 'auto' ? parseInt(22 / this.currentData.length - 1) : this.colTextMaxLength
     }
   },
   methods: {

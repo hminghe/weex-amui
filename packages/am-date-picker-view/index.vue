@@ -153,7 +153,8 @@ export default {
     return h(AmPickerView, {
       props: {
         data: this.dateData,
-        value: Object.keys(this.currentValue).map(key => this.currentValue[key])
+        value: Object.keys(this.currentValue).map(key => this.currentValue[key]),
+        colTextMaxLength: 0
       },
       on: {
         input: (val) => {

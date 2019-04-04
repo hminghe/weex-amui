@@ -18,6 +18,7 @@
       <am-picker-view
         :data="data"
         :value="currentValue"
+        :col-text-max-length="colTextMaxLength"
         @change="handlePickerChange"
         ref="pickerView"
       ></am-picker-view>
@@ -73,6 +74,10 @@ export default {
     format: {
       type: [Function, String],
       default: (lables) => lables.join(',')
+    },
+    colTextMaxLength: {
+      type: [Number, String],
+      default: 'auto'
     }
   },
   data () {

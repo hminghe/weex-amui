@@ -85,8 +85,11 @@
 | **`dismissText`** | `String` | `N` | `确定` | 取消的文案 |
 | **`format`** | `Function` | `N` | `(lables) => lables.join(',')` | 格式化选中值的函数 |
 | **`placeholder`** | `String` | `N` | `请选择` | 当值为空的时候，传给子组件的 `extra` 值 |
+| **`colTextMaxLength`** | `[String, Number]` | `N` | `auto` | [注2]  |
 
 - 注1：普通：`Array{Array<{value, label}>}`， 联动： `Array<{value, label, children: Array}>`。详细结构可以参考 [这里](https://github.com/HMingHe/weex-amui/blob/master/example/picker-view/data.js)
+
+- 注2：每列文字最大多长, 多出的加`...`, `auto` 自动计算最多可以显示多少位, `0` 不限制 `(如果你的文字不会出现换行的问题建议设置为0)`
 
 ### Events
 | Event	 | Description | Parameters |

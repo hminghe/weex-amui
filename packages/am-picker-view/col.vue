@@ -303,7 +303,7 @@ export default {
   computed: {
     items () {
       return this.data.map(item => {
-        if (item.label.length > this.textLength) {
+        if (this.textLength > 0 && item.label.length > this.textLength) {
           let j = 0
           for (let i = 0; i < item.label.length; i++) {
             let code = item.label.charCodeAt(i)
@@ -313,13 +313,11 @@ export default {
               j += 0.5
             }
             if (j >= this.textLength) {
-              console.log(i, this.textLength)
               return item.label.slice(0, i + 1) + '...'
             }
           }
-        } else {
-          return item.label
         }
+        return item.label
       }).join('\n')
     }
   }
